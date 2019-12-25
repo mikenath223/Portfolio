@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
 body {
-  font-family: "Playfair Display"; }
+  font-family: "Playfair Display";
+  font-size: 20px; }
 
 header {
+  margin-top: 50px;
   width: 100%; }
   header nav {
-    width: 30%; }
+    width: 30%;
+    margin-left: auto;
+    margin-right: 30px; }
     header nav ul {
       display: flex;
       list-style: none;

@@ -1,16 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 
+@mixin 
 
 body {
   font-family: "Playfair Display";
+  font-size: 20px;
+
 }
 
 main {
 }
 header {
+  margin-top: 50px;
   width: 100%;
   nav {
     width: 30%;
+    margin-left: auto;
+    margin-right: 30px;
     ul {
       display: flex;
       list-style: none;
