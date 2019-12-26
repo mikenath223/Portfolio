@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
 
-// @mixin
+// @mixin border-radius($val) {
+//   -
+// }
+
+
 body {
-  font-family: "Playfair Display", Roboto;
+  font-family: "Playfair Display", Verdana, sans-serif;
   font-size: 20px;
   color: rgba(0, 0, 0, 0.95);
 }
@@ -30,18 +34,38 @@ header {
     justify-content: space-around;
     padding-top: 5%;
     padding-left: 10%;
+    h3{
+      font-weight: 500;
+    }
     .passion {
       &::after {
         content: "_";
         font-weight: bold;
         font-size: 20px;
         color: red;
-        visibility: visible;
+        opacity: 1;
+        animation: cursor 0.5s infinite ;
       }
     }
 
     .skill {
       width: 20%;
+      position: relative;
+      h2 {
+        margin-bottom: 10px;
+      }
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        opacity: 0.4;
+        background: rgba(128, 0, 128, 0.3);
+        width: 250px;
+        height: 230px;
+        transform-origin: 50% 48%;
+        border-radius: 43%;
+        animation: drift 7000ms infinite linear;
+      }
       .skill-tab {
         display: flex;
         justify-content: space-between;
@@ -51,14 +75,20 @@ header {
 }
 
 @keyframes cursor {
-  0% {
-    visibility: visible;
+  from {
+    opacity: 1;
   }
-  50% {
-    visibility: hidden;
+  from {
+    opacity: 0;
   }
-  100% {
-    visibility: visible;
+}
+
+@keyframes drift {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
   }
 }
 
@@ -69,7 +99,7 @@ header {
       color: white;
       background: linear-gradient(
         to top,
-        hsla(0, 0%, 0%,  90%),
+        hsla(0, 0%, 0%, 90%),
         75%,
         hsla(0, 0%, 0%, 0)
       );
