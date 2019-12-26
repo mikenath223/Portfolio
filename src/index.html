@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="scss/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Portfolio | Ukeje Michgolden</title>
   <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </head>
@@ -15,24 +15,93 @@
     <nav>
       <ul>
         <li>Projects</li>
-        <li>Contacts</li>
+        <li>Contact</li>
       </ul>
     </nav>
   </header>
-  <main>
-    <section>
-      <h3>I am</h3>
-      <h1>Michgolden Ukeje</h1>
-    </section>
-    <h1>Featured Projects</h1>
-    <section>
+  <main class="main-container">
+    <section class="intro">
+      <div class="intro-personal">
+        <h3>I am</h3>
+        <h1>Michgolden Ukeje</h1>
+        <h3>filled with an <span class="passion">undying passion</span> for creating <br>
+          UI-UX integrated software solutions.</h3>
+      </div>
+      <div class="skill">
+        <h2>SKILLS</h2>
+        <div class="skill-tab">
+          <div class="skill-tab1">
+            <p>HTML-CSS</p>
+            <p>Ruby</p>
+            <p>React</p>
+          </div>
 
+          <div class="skill-tab2">
+            <p>JavaScript</p>
+            <p>Rails</p>
+            <p>Redux</p>
+          </div>
+        </div>
+      </div>
     </section>
-    <h1>Projects</h1>
+
+    <section class="featured-project">
+      <h1>Featured Projects</h1>
+      <figure class="feature-proj">
+        <img src="" alt="">
+        <figcaption>Mixin | /HTML/ /CSS/</figcaption>
+      </figure>
+
+      <figure class="feature-proj">
+        <img src="" alt="">
+        <figcaption>Tic-Tac-Toe | /Ruby/</figcaption>
+      </figure>
+
+      <figure class="feature-proj">
+        <img src="" alt="">
+        <figcaption></figcaption>
+      </figure>
+
+      <figure class="feature-proj">
+        <img src="" alt="">
+        <figcaption></figcaption>
+      </figure>
+
+      <figure class="feature-proj">
+        <img src="" alt="">
+        <figcaption></figcaption>
+      </figure>
+
+      <figure class="feature-proj">
+        <img src="" alt="">
+        <figcaption></figcaption>
+      </figure>
+
+      <figure class="feature-proj">
+        <img src="" alt="">
+        <figcaption></figcaption>
+      </figure>
+    </section>
     <section>
+      <h1>Projects</h1>
 
     </section>
   </main>
+  <div>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+      </defs>
+      <g class="parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="purple" />
+      </g>
+    </svg>
+  </div>
+
+
 </body>
 
 </html>

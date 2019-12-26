@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
+
+// @mixin
+body {
+  font-family: "Playfair Display", Roboto;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.95);
+}
+
+header {
+  margin-top: 20px;
+  width: 100%;
+  nav {
+    width: 20%;
+    margin-left: auto;
+    margin-right: 30px;
+    ul {
+      display: flex;
+      list-style: none;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+.main-container {
+  width: 100%;
+  .intro {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5%;
+    padding-left: 10%;
+    .passion {
+      &::after {
+        content: "_";
+        font-weight: bold;
+        font-size: 20px;
+        color: red;
+        visibility: visible;
+      }
+    }
+
+    .skill {
+      width: 20%;
+      .skill-tab {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+@keyframes cursor {
+  0% {
+    visibility: visible;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+.featured-project {
+  .feature-proj {
+    figcaption {
+      height: 50px;
+      color: white;
+      background: linear-gradient(
+        to top,
+        hsla(0, 0%, 0%,  90%),
+        75%,
+        hsla(0, 0%, 0%, 0)
+      );
+    }
+  }
+}
