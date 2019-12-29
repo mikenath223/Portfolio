@@ -3,19 +3,42 @@ body {
   font-family: "Playfair Display", Verdana, sans-serif;
   font-size: 20px;
   color: rgba(0, 0, 0, 0.95); }
+  body::-webkit-scrollbar {
+    width: 15px; }
 
 header {
   margin-top: 20px;
-  width: 100%; }
+  width: 100%;
+  height: 40px; }
   header nav {
+    height: 100%;
     width: 20%;
     margin-left: auto;
     margin-right: 30px; }
+    header nav .line {
+      height: 100%; }
+      header nav .line span {
+        display: block;
+        height: 2px;
+        margin-bottom: 3px;
+        background: palevioletred; }
+      header nav .line .span1 {
+        width: 70px;
+        animation: line 2s linear; }
+      header nav .line .span2 {
+        width: 40px;
+        animation: mid-line 2s linear; }
+      header nav .line .span3 {
+        width: 50px;
+        animation: line 2s linear; }
     header nav ul {
       display: flex;
       list-style: none;
       flex-direction: row;
       justify-content: space-between; }
+      header nav ul a {
+        text-decoration: none;
+        color: inherit; }
 
 .main-container {
   width: 100%; }
@@ -23,36 +46,51 @@ header {
     display: flex;
     justify-content: space-around;
     padding-top: 5%;
-    padding-left: 10%; }
+    padding-left: 15%; }
     .main-container .intro h3 {
       font-weight: 500; }
+    .main-container .intro h2 {
+      font-weight: 400; }
     .main-container .intro .passion::after {
       content: "_";
       font-weight: bold;
-      font-size: 20px;
       color: red;
       opacity: 1;
       animation: cursor 0.5s infinite; }
     .main-container .intro .skill {
       width: 20%;
-      position: relative; }
+      position: relative;
+      margin-top: 60px;
+      padding-right: 2%; }
       .main-container .intro .skill h2 {
         margin-bottom: 10px; }
       .main-container .intro .skill::before {
         content: "";
         display: block;
         position: absolute;
+        bottom: -80px;
+        right: 2px;
         opacity: 0.4;
         background: rgba(128, 0, 128, 0.3);
-        width: 250px;
-        height: 230px;
+        width: 320px;
+        height: 295px;
         transform-origin: 50% 48%;
         border-radius: 43%;
-        animation: drift 7000ms infinite linear; }
+        animation: drift 7s infinite linear; }
       .main-container .intro .skill .skill-tab {
         display: flex;
         justify-content: space-between; }
 
+@keyframes line {
+  50% {
+    width: 35px; }
+  100% {
+    width: 70px; } }
+@keyframes mid-line {
+  50% {
+    transform: translateX(-30px); }
+  100% {
+    transform: translateX(0); } }
 @keyframes cursor {
   from {
     opacity: 1; }
@@ -63,9 +101,45 @@ header {
     transform: rotate(0deg); }
   from {
     transform: rotate(360deg); } }
-.featured-project .feature-proj figcaption {
-  height: 50px;
-  color: white;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), 75%, rgba(0, 0, 0, 0)); }
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px black;
+  -webkit-box-shadow: inset 0 0 6px black;
+  -webkit-border-radius: 10px;
+  border-radius: 10px; }
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  background: rgba(255, 0, 0, 0.8);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
+
+.articles {
+  width: 100%;
+  padding-left: 5%; }
+  .articles .article-one {
+    width: 40%;
+    margin: auto; }
+  .articles time {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 18px; }
+
+.contact {
+  background-color: #262626;
+  color: #fff;
+  height: 300px;
+  padding: 2%; }
+  .contact .greeting h2 {
+    display: inline; }
+  .contact .greeting .fa-comment-dots {
+    position: relative;
+    top: -20px;
+    font-size: 20px;
+    color: limegreen; }
+  .contact .contact-list {
+    margin-top: 2%;
+    padding-left: 3%;
+    list-style-color: green; }
 
 /*# sourceMappingURL=style.css.map */

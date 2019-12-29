@@ -1,0 +1,24 @@
+.featured-project {
+  margin-top: 7%;
+  margin-bottom: 5%;
+  padding-left: 5%;
+  .feature-wrap {
+    display: grid;
+    grid-template: 1fr 1fr / repeat(3, 1fr);
+    .feature-proj {
+      figcaption {
+        height: 60px;
+        // display: none;
+        background: linear-gradient(
+          to top,
+          hsla(0, 0%, 0%, 50%),
+          75%,
+          hsla(0, 0%, 0%, 0)
+        );
+        &:hover {
+          display: block;
+        }
+      }
+    }
+  }
+}

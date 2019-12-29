@@ -5,7 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://kit.fontawesome.com/81924b44b8.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/feature.css">
+  <link rel="stylesheet" href="css/projects.css">
   <link rel="stylesheet" href="css/Normalize.css">
   <title>Portfolio | Ukeje Michgolden</title>
 </head>
@@ -14,17 +17,17 @@
   <header>
     <nav>
       <ul>
-        <div>
-          <li>Projects</li>
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="line">
+          <li><a href="#all-project">Projects</a></li>
+          <span class="span1"></span>
+          <span class="span2"></span>
+          <span class="span3"></span>
         </div>
-        <div>
-          <li>Contact</li>
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="line">
+          <li><a href="#contact">Contact</a></li>
+          <span class="span1"></span>
+          <span class="span2"></span>
+          <span class="span3"></span>
         </div>
       </ul>
     </nav>
@@ -34,6 +37,7 @@
       <div class="intro-personal">
         <h3>I am</h3>
         <h1>Michgolden Ukeje</h1>
+        <h2>a Full Stack Web Developer</h2>
         <h3>filled with an <span class="passion">undying passion</span> for creating <br>
           UI-UX integrated software solutions.</h3>
       </div>
@@ -56,21 +60,20 @@
     </section>
 
     <section class="featured-project">
+      <h1>Featured Projects</h1>
       <div class="feature-wrap">
-        <h1>Featured Projects</h1>
         <figure class="feature-proj">
           <img src="" alt="">
-          <figcaption>Mixin | /HTML/ /CSS/</figcaption>
+          <figcaption>
+            <h4>Mixin | - HTML - CSS -</h4>
+          </figcaption>
         </figure>
 
         <figure class="feature-proj">
           <img src="" alt="">
-          <figcaption>Tic-Tac-Toe | /Ruby/</figcaption>
-        </figure>
-
-        <figure class="feature-proj">
-          <img src="" alt="">
-          <figcaption></figcaption>
+          <figcaption>
+            <h4>Tic-Tac-Toe | -Ruby-</h4>
+          </figcaption>
         </figure>
 
         <figure class="feature-proj">
@@ -95,9 +98,43 @@
       </div>
     </section>
 
-    <section>
-      <h1>Projects</h1>
+    <section class="project-list">
+      <h1 id="all-project">Projects</h1>
+      <div class="project-tab-wrap">
+        <div class="project-tab"></div>
+        <div class="project-tab"></div>
+      </div>
+      <div class="project-tab"></div>
+    </section>
 
+    <section class="articles">
+      <h1>Selected articles</h1>
+      <div class="list-articles">
+        <div class="article-one">
+          <h2>CSS Grid Vs Flexbox: A critique</h2>
+          <time datetime="2019-11-28">28th Nov 2019</time>
+          <img src="" alt="">
+        </div>
+        <div>
+          <h2></h2>
+        </div>
+        <div>
+          <h2></h2>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="greeting">
+        <h2>Come say Hi</h2>
+        <i class="fas fa-comment-dots"></i>
+      </div>
+      <ul class="contact-list">
+        <li>Github</li>
+        <li>LinkedIn</li>
+        <li>Codepen</li>
+        <li>Email</li>
+      </ul>
     </section>
   </main>
 </body>

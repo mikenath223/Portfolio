@@ -1,0 +1,14 @@
+.featured-project {
+  margin-top: 7%;
+  margin-bottom: 5%;
+  padding-left: 5%; }
+  .featured-project .feature-wrap {
+    display: grid;
+    grid-template: 1fr 1fr/repeat(3, 1fr); }
+    .featured-project .feature-wrap .feature-proj figcaption {
+      height: 60px;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.5), 75%, rgba(0, 0, 0, 0)); }
+      .featured-project .feature-wrap .feature-proj figcaption:hover {
+        display: block; }
+
+/*# sourceMappingURL=feature.css.map */

@@ -1,0 +1,15 @@
+.project-list {
+  padding: 0 5%; }
+  .project-list .project-tab-wrap {
+    display: flex;
+    justify-content: space-between; }
+    .project-list .project-tab-wrap .project-tab {
+      margin-top: 0; }
+  .project-list .project-tab {
+    width: 49%;
+    height: 150px;
+    background-color: lightblue;
+    margin: 2% auto;
+    border-radius: 5px; }
+
+/*# sourceMappingURL=projects.css.map */
