@@ -1,4 +1,2 @@
-/src/css/.sass-cache
-/src/css/feature.css.map
-/src/css/projects.css.map
-/src/css/style.css.map
+src/css/.sass-cache
+src/css/*.map
