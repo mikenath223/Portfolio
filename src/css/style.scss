@@ -4,6 +4,7 @@ body {
   font-family: "Playfair Display", Verdana, sans-serif;
   font-size: 20px;
   color: rgba(0, 0, 0, 0.95);
+  width: 100vw;
   &::-webkit-scrollbar {
     width: 15px;
   }
@@ -11,39 +12,45 @@ body {
 
 header {
   margin-top: 20px;
-  width: 100%;
   height: 40px;
+
   nav {
     height: 100%;
     width: 20%;
     margin-left: auto;
     margin-right: 30px;
+
     .line {
       height: 100%;
+
       span {
         display: block;
         height: 2px;
         margin-bottom: 3px;
         background: palevioletred;
       }
+
       .span1 {
         width: 70px;
         animation: line 2s linear;
       }
+
       .span2 {
         width: 40px;
         animation: mid-line 2s linear;
       }
+
       .span3 {
         width: 50px;
         animation: line 2s linear;
       }
     }
+
     ul {
       display: flex;
       list-style: none;
-      flex-direction: row;
       justify-content: space-between;
+
       a {
         text-decoration: none;
         color: inherit;
@@ -53,22 +60,37 @@ header {
 }
 
 .main-container {
-  width: 100%;
+  width: 100vw;
+
   .intro {
     display: flex;
     justify-content: space-around;
     padding-top: 5%;
     padding-left: 15%;
-    h3 {
-      font-weight: 500;
+    width: 100%;
+
+    .intro-personal {
+      h1 {
+        display: block;
+        transition: all 3s ease-in-out;
+      }
+      & * {
+        margin: 3px;
+      }
     }
+
     h2 {
       font-weight: 400;
     }
+
+    h3 {
+      font-weight: 500;
+    }
+
     .passion {
       &::after {
         content: "_";
-        font-weight: bold;
+        font-weight: bolder;
         color: red;
         opacity: 1;
         animation: cursor 0.5s infinite;
@@ -80,9 +102,11 @@ header {
       position: relative;
       margin-top: 60px;
       padding-right: 2%;
+
       h2 {
         margin-bottom: 10px;
       }
+
       &::before {
         content: "";
         display: block;
@@ -97,6 +121,7 @@ header {
         border-radius: 43%;
         animation: drift 7s infinite linear;
       }
+
       .skill-tab {
         display: flex;
         justify-content: space-between;
@@ -109,6 +134,7 @@ header {
   50% {
     width: 35px;
   }
+
   100% {
     width: 70px;
   }
@@ -118,6 +144,7 @@ header {
   50% {
     transform: translateX(-30px);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -127,6 +154,7 @@ header {
   from {
     opacity: 1;
   }
+
   from {
     opacity: 0;
   }
@@ -135,7 +163,9 @@ header {
 @keyframes drift {
   from {
     transform: rotate(0deg);
+    opacity: 0.5;
   }
+
   from {
     transform: rotate(360deg);
   }
@@ -154,16 +184,17 @@ header {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   background: rgba(255, 0, 0, 0.8);
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 .articles {
   width: 100%;
   padding-left: 5%;
+
   .article-one {
     width: 40%;
     margin: auto;
   }
+
   time {
     color: rgba(0, 0, 0, 0.8);
     font-size: 18px;
@@ -175,10 +206,12 @@ header {
   color: #fff;
   height: 300px;
   padding: 2%;
+  width: 100%;
   .greeting {
-    h2 {
+    .greet-head {
       display: inline;
     }
+
     .fa-comment-dots {
       position: relative;
       top: -20px;
@@ -186,8 +219,47 @@ header {
       color: limegreen;
     }
   }
+
   .contact-list {
     margin-top: 2%;
     padding-left: 3%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  header {
+    nav {
+      width: initial;
+      margin-left: 20px;
+      .line:first-child {
+        margin-left: 40%;
+      }
+    }
+  }
+
+  .main-container {
+    .intro {
+      flex-direction: column;
+      .skill {
+        .skill-tab {
+          width: 200px;
+          height: 150px;
+          .skill-tab1 p,
+          .skill-tab2 p {
+            margin-bottom: 15px;
+          }
+        }
+        &::before {
+          width: 250px;
+          height: 235px;
+          left: -29px;
+          bottom: -10px;
+        }
+      }
+    }
   }
 }
