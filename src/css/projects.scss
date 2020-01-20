@@ -1,4 +1,3 @@
-
 .project-list {
   padding: 0 5%;
 
@@ -16,6 +15,15 @@
 
     .project-tab {
       margin-top: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .project-list {
+    .project-tab-wrap {
+      flex-direction: column;
+
     }
   }
 }

@@ -12,4 +12,8 @@
     .project-list .project-tab-wrap .project-tab {
       margin-top: 0; }
 
+@media only screen and (max-width: 768px) {
+  .project-list .project-tab-wrap {
+    flex-direction: column; } }
+
 /*# sourceMappingURL=projects.css.map */

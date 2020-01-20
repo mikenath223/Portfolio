@@ -4,10 +4,9 @@
   padding-left: 5%; }
   .featured-project .feature-wrap {
     display: grid;
-    grid-template: 1fr 1fr/repeat(3, 1fr); }
+    grid-template: 1fr 1fr / autofill; }
     .featured-project .feature-wrap .feature-proj figcaption {
-      height: 60px;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.5), 75%, rgba(0, 0, 0, 0)); }
+      height: 60px; }
       .featured-project .feature-wrap .feature-proj figcaption:hover {
         display: block; }
 

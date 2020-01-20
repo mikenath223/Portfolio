@@ -1,10 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
 
 body {
-  font-family: "Playfair Display", Verdana, sans-serif;
+  font-family: "Ubuntu", Verdana, sans-serif;
   font-size: 20px;
-  color: rgba(0, 0, 0, 0.95);
-  width: 100vw;
+  background-color: #d6edff36;
+  color: rgba(0, 0, 0, 0.75);
+  letter-spacing: 1px;
+  word-spacing: 1px;
   &::-webkit-scrollbar {
     width: 15px;
   }
@@ -27,7 +29,7 @@ header {
         display: block;
         height: 2px;
         margin-bottom: 3px;
-        background: palevioletred;
+        background: #fb4d3d;
       }
 
       .span1 {
@@ -50,7 +52,6 @@ header {
       display: flex;
       list-style: none;
       justify-content: space-between;
-
       a {
         text-decoration: none;
         color: inherit;
@@ -60,14 +61,11 @@ header {
 }
 
 .main-container {
-  width: 100vw;
-
   .intro {
     display: flex;
     justify-content: space-around;
-    padding-top: 5%;
+    margin-top: 70px;
     padding-left: 15%;
-    width: 100%;
 
     .intro-personal {
       h1 {
@@ -91,20 +89,20 @@ header {
       &::after {
         content: "_";
         font-weight: bolder;
-        color: red;
+        color: #fb4d3d;
         opacity: 1;
         animation: cursor 0.5s infinite;
       }
     }
 
     .skill {
-      width: 20%;
       position: relative;
       margin-top: 60px;
-      padding-right: 2%;
-
-      h2 {
+      padding-left: 2%;
+      h1 {
+        margin-left: 40px;
         margin-bottom: 10px;
+        color: #000000;
       }
 
       &::before {
@@ -113,8 +111,9 @@ header {
         position: absolute;
         bottom: -80px;
         right: 2px;
-        opacity: 0.4;
-        background: rgba(128, 0, 128, 0.3);
+        z-index: -99;
+        background: linear-gradient(315deg, #b3cbd5, #d5f1fe);
+        box-shadow: -30px -30px 60px #a9bfc9, 30px 30px 60px #e5ffff;
         width: 320px;
         height: 295px;
         transform-origin: 50% 48%;
@@ -125,6 +124,13 @@ header {
       .skill-tab {
         display: flex;
         justify-content: space-between;
+        color: #000;
+        .skill-tab1 {
+          margin-right: 15px;
+        }
+        p {
+          font-weight: bold;
+        }
       }
     }
   }
@@ -163,7 +169,6 @@ header {
 @keyframes drift {
   from {
     transform: rotate(0deg);
-    opacity: 0.5;
   }
 
   from {
@@ -187,12 +192,18 @@ header {
 }
 
 .articles {
-  width: 100%;
   padding-left: 5%;
 
   .article-one {
-    width: 40%;
+    * {
+      margin-bottom: 20px;
+    }
+    width: 60%;
     margin: auto;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
 
   time {
@@ -204,12 +215,13 @@ header {
 .contact {
   background-color: #262626;
   color: #fff;
-  height: 300px;
-  padding: 2%;
-  width: 100%;
+  height: 200px;
+  padding: 40px;
   .greeting {
     .greet-head {
       display: inline;
+      text-decoration: underline;
+      text-decoration-color: rgb(207, 58, 58);
     }
 
     .fa-comment-dots {
@@ -221,14 +233,34 @@ header {
   }
 
   .contact-list {
-    margin-top: 2%;
-    padding-left: 3%;
+    margin-top: 10px;
+    padding-left: 20px;
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
+  .main-container {
+    .intro {
+      .intro-personal {
+        width: 40%;
+      }
+      .skill {
+        &::before {
+          right: -40px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
   body {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   header {
@@ -238,13 +270,22 @@ header {
       .line:first-child {
         margin-left: 40%;
       }
+      ul {
+        width: 250px;
+        margin-left: auto;
+      }
     }
   }
 
   .main-container {
     .intro {
       flex-direction: column;
+      margin-right: 30%;
+      .intro-personal {
+        width: 100%;
+      }
       .skill {
+        margin: 60px 10% 60px 0;
         .skill-tab {
           width: 200px;
           height: 150px;
