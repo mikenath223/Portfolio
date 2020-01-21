@@ -10,6 +10,10 @@ body {
   &::-webkit-scrollbar {
     width: 15px;
   }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 header {
@@ -18,7 +22,7 @@ header {
 
   nav {
     height: 100%;
-    width: 20%;
+    width: 15%;
     margin-left: auto;
     margin-right: 30px;
 
@@ -52,10 +56,6 @@ header {
       display: flex;
       list-style: none;
       justify-content: space-between;
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
     }
   }
 }
@@ -65,12 +65,15 @@ header {
     display: flex;
     justify-content: space-around;
     margin-top: 70px;
+    margin-bottom: 30px;
     padding-left: 15%;
-
     .intro-personal {
+      width: 40%;
+      margin-top: 30px;
       h1 {
         display: block;
         transition: all 3s ease-in-out;
+        color: goldenrod;
       }
       & * {
         margin: 3px;
@@ -98,11 +101,16 @@ header {
     .skill {
       position: relative;
       margin-top: 60px;
-      padding-left: 2%;
+      padding-right: 35px;
       h1 {
         margin-left: 40px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         color: #000000;
+        span {
+          background-color: goldenrod;
+          display: inline-block;
+
+        }
       }
 
       &::before {
@@ -123,13 +131,18 @@ header {
 
       .skill-tab {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         color: #000;
         .skill-tab1 {
-          margin-right: 15px;
+          margin-right: 10px;
         }
         p {
+          padding: 2px;
+          border: 2px solid goldenrod;
+          margin-bottom: 20px;
           font-weight: bold;
+          text-align: center;
+          border-radius: 10px;
         }
       }
     }
@@ -188,13 +201,16 @@ header {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-  background: rgba(255, 0, 0, 0.8);
+  background: rgb(255, 145, 0);
 }
 
 .articles {
   padding-left: 5%;
 
   .article-one {
+    display: block;
+    text-decoration: none;
+    color: inherit;
     * {
       margin-bottom: 20px;
     }
@@ -236,22 +252,31 @@ header {
     margin-top: 10px;
     padding-left: 20px;
     list-style: none;
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
   }
 }
 
 @media only screen and (max-width: 1024px) {
+  header {
+    nav {
+      width: 25%;
+    }
+  }
+  
   .main-container {
     .intro {
+      padding-left: 5%;
+      margin-bottom: 30px;
+      width: 90%;
       .intro-personal {
         width: 40%;
       }
       .skill {
+        margin-top: 50px;
+        margin-left: 70px;
+        
         &::before {
-          right: -40px;
+          right: -18px;
+          bottom: -5px;
         }
       }
     }
@@ -278,20 +303,26 @@ header {
   }
 
   .main-container {
+    
     .intro {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 70%;
+      justify-content: center;
       flex-direction: column;
-      margin-right: 30%;
       .intro-personal {
         width: 100%;
       }
       .skill {
-        margin: 60px 10% 60px 0;
+        margin: 60px 10% 10px 50px;
         .skill-tab {
           width: 200px;
           height: 150px;
           .skill-tab1 p,
           .skill-tab2 p {
-            margin-bottom: 15px;
+            margin-bottom: 25px;
           }
         }
         &::before {
