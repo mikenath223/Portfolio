@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
 
+html {
+}
+
 body {
   font-family: "Ubuntu", Verdana, sans-serif;
   font-size: 20px;
@@ -24,33 +27,27 @@ header {
     width: 15%;
     margin-left: auto;
     margin-right: 30px;
-
     .line {
       height: 100%;
-
       span {
         display: block;
         height: 2px;
         margin-bottom: 3px;
-        background: #fb4d3d;
+        background: #ef6034;
       }
-
       .span1 {
         width: 70px;
         animation: line 2s linear;
       }
-
       .span2 {
         width: 40px;
         animation: mid-line 2s linear;
       }
-
       .span3 {
         width: 50px;
         animation: line 2s linear;
       }
     }
-
     ul {
       display: flex;
       list-style: none;
@@ -60,47 +57,77 @@ header {
 }
 
 .ball {
-  position: absolute;
+  position: fixed;
   width: 35px;
   height: 35px;
   bottom: 0;
-  left: 5px;
-  border: 3px solid #a9bfc9;
+  left: 10px;
+  border: 3px solid #afe0ff;
   border-radius: 50%;
-  background-color: orangered;
+  background-color: #ef6034;
   overflow: hidden;
   font-size: 25px;
-  padding: 1px 0 3px 9px;
+  opacity: 0.1;
+  padding: 0 0 2.5px 5px;
   color: #fff;
-  animation: rollIn 10s ease-in-out 0.2s forwards;
+  animation: rollIn 3s forwards linear;
+}
+
+.expand {
+  position: fixed;
+  top: 20px;
+  width: auto;
+  border: 3px solid #afe0ff;
+  padding: 0 5px 2.5px 8px;
+  color: #fff;
+  height: 35px;
+  left: 10px;
+  opacity: 0.3;
+  font-size: 25px;
+  background-color: #ef6034;
+  border-radius: 9px;
+  z-index: 5;
+  transition: all 0.2s ease-in-out;
+  animation: expand 0.5s forwards ease-out;
+  &:hover {
+    opacity: 1;
+    animation: wobble 1.5s alternate infinite ease-in;
+  }
+}
+
+@keyframes wobble {
+  from {
+    transform: scale(0.9);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes expand {
+  from {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes rollIn {
-  10% {
-    bottom: 200px;
-    transform: rotate(50deg);
+  from {
+    opacity: 0.8;
+    transform: translate(0, 0) rotate(0deg);
   }
 
-  30% {
-    bottom: 400px;
-    transform: rotate(100deg);
-  }
-
-  60% {
-    bottom: 600px;
-    transform: rotate(150deg);
-  }
-
-  90% {
-    bottom: initial;
-    top: 0;
-    transform: rotate(200deg);
-  }
-
-  100% {
-    top: 0;
-    bottom: initial;
-    transform: rotate(360deg);
+  to {
+    opacity: 1;
+    transform: translate(0, -700px) rotate(360deg);
   }
 }
 
@@ -120,7 +147,7 @@ header {
         transition: all 3s ease-in-out;
         color: goldenrod;
       }
-      & * {
+      * {
         margin: 3px;
       }
     }
@@ -137,7 +164,7 @@ header {
       &::after {
         content: "_";
         font-weight: bolder;
-        color: #fb4d3d;
+        color: #ef6034;
         opacity: 1;
         animation: cursor 0.5s infinite;
       }
@@ -154,7 +181,6 @@ header {
         span {
           background-color: goldenrod;
           display: inline-block;
-
         }
       }
 
@@ -165,8 +191,8 @@ header {
         bottom: -80px;
         right: 2px;
         z-index: -99;
-        background: linear-gradient(315deg, #b3cbd5, #d5f1fe);
-        box-shadow: -30px -30px 60px #a9bfc9, 30px 30px 60px #e5ffff;
+        background: linear-gradient(315deg, #afe0ff, #d5f1fe);
+        box-shadow: -10px -10px 30px #a9bfc9, 10px 10px 30px #e5ffff;
         width: 320px;
         height: 295px;
         transform-origin: 50% 48%;
@@ -183,7 +209,7 @@ header {
         }
         p {
           padding: 2px;
-          border: 2px solid goldenrod;
+          border: 1px solid goldenrod;
           margin-bottom: 20px;
           font-weight: bold;
           text-align: center;
@@ -246,7 +272,7 @@ header {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-  background: rgb(255, 145, 0);
+  background: #ef6034;
 }
 
 .articles {
@@ -282,7 +308,7 @@ header {
     .greet-head {
       display: inline;
       text-decoration: underline;
-      text-decoration-color: rgb(207, 58, 58);
+      text-decoration-color: #ef6034;
     }
 
     .fa-comment-dots {
@@ -306,7 +332,7 @@ header {
       width: 25%;
     }
   }
-  
+
   .main-container {
     .intro {
       padding-left: 5%;
@@ -318,7 +344,7 @@ header {
       .skill {
         margin-top: 50px;
         margin-left: 70px;
-        
+
         &::before {
           right: -18px;
           bottom: -5px;
@@ -327,6 +353,7 @@ header {
     }
   }
 }
+
 
 @media only screen and (max-width: 800px) {
   body {
@@ -348,7 +375,6 @@ header {
   }
 
   .main-container {
-    
     .intro {
       margin-left: auto;
       margin-right: auto;
@@ -357,11 +383,13 @@ header {
       width: 70%;
       justify-content: center;
       flex-direction: column;
+      align-items: center;
       .intro-personal {
         width: 100%;
       }
       .skill {
         margin: 60px 10% 10px 50px;
+        width: 200px;
         .skill-tab {
           width: 200px;
           height: 150px;
@@ -375,6 +403,36 @@ header {
           height: 235px;
           left: -29px;
           bottom: -10px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body {
+    font-size: 12px;
+  }
+
+  .main-container {
+    .intro {
+      width: auto;
+      margin: 0;
+      align-items: center;
+      .intro-personal {
+        width: 280px;
+        margin-top: 20px;
+        padding: 0;
+      }
+      .skill {
+        margin-left: 80px;
+        h1 {
+          padding-top: 50px;
+        }
+        .skill-tab {
+          align-items: center;
+          margin-left: 25px;
+          justify-content: flex-start;
         }
       }
     }

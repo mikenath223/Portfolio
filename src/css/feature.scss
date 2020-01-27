@@ -12,7 +12,8 @@
   .feature-wrap {
     display: grid;
     grid-template: 1fr 1fr / repeat(auto-fill, minmax(350px, 1fr));
-    width: 95%;
+    justify-content: center;
+    align-items: center;
     .feature-proj {
       height: 250px;
       background: url(../assets/mixin-project.png) no-repeat;
@@ -27,8 +28,8 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        transform: scaleY(0);
-        transition: transform 0.7s, width 1.2s, height 1s;
+        // transform: scaleY(0);
+        // transition: transform 0.7s, width 1.2s, height 1s;
         * {
           text-align: center;
           margin-top: -40px;
@@ -52,13 +53,13 @@
       &:nth-child(2) {
         background-image: url(../assets/);
       }
-      &:hover figcaption {
-        height: 100%;
-        width: 100%;
-        opacity: 0.8;
-        transform: scaleY(1);
-        background-color: #7510f7;
-      }
+      // &:hover figcaption {
+      //   height: 100%;
+      //   width: 100%;
+      //   opacity: 0.8;
+      //   transform: scaleY(1);
+      //   background-color: #7510f7;
+      // }
     }
   }
 }
@@ -72,6 +73,19 @@
   }
 }
 
+@media only screen and (max-width: 400px) {
+  .featured-project {
+    padding: 0;
+    margin: 0 auto;
+    .feature-wrap {
+      .feature-proj {
+        // width: 200px;
+      }
+    }
+  }
+}
+
+
 @media only screen and (max-width: 800px) {
   .featured-project {
     margin-top: 50px;
@@ -79,7 +93,7 @@
       .feature-proj {
         figcaption {
           .source-wrap {
-            width: 80%;
+            // width: 80%;
           }
         }
       }

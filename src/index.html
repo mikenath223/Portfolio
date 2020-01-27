@@ -7,14 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/feature.css">
-  <link rel="stylesheet" href="css/projects.css">
   <link rel="stylesheet" href="css/Normalize.css">
   <title>Portfolio | Ukeje Michgolden</title>
 </head>
 
 <body>
   <header>
-    <div class="ball">GitHub</div>
+    <div class="ball"><a href="https://github.com/mikenath223">G</a></div>
     <nav>
       <ul>
         <div class="line">
@@ -32,12 +31,13 @@
       </ul>
     </nav>
   </header>
+  
   <main class="main-container">
     <section class="intro">
       <div class="intro-personal">
         <h3>I am</h3>
         <h1>Michgolden Ukeje</h1>
-        <h2>a Full Stack Web Developer</h2>
+        <h2>a <span class="taught">self-taught</span> Full Stack Web Developer</h2>
         <h3>filled with an <span class="passion">undying passion</span> for creating <br>
           UI-UX integrated web solutions.</h3>
       </div>
@@ -47,7 +47,7 @@
           <div class="skill-tab1">
             <p>HTML-CSS</p>
             <p>Ruby</p>
-            <!-- <p>React</p> -->
+            <!-- <p>React</p>  -->
           </div>
 
           <div class="skill-tab2">
@@ -57,7 +57,8 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> 
+ 
 
     <section class="featured-project">
       <h1>Featured Projects</h1>
@@ -112,22 +113,13 @@
         </figure>
     </section>
 
-    <section class="project-list">
-      <h1 id="all-project">Projects</h1>
-      <div class="project-tab-wrap">
-        <div class="project-tab"></div>
-        <div class="project-tab"></div>
-      </div>
-      <div class="project-tab"></div>
-    </section>
-
     <section class="articles">
       <h1>Published article</h1>
       <div class="list-articles">
         <a href="" class="article-one">
           <h2>CSS Grid Vs Flexbox: A critique</h2>
           <time datetime="2019-11-28">28th Nov 2019</time>
-          <img src="assets/reponsive.gif" alt="reponsive">
+          <!-- <img src="assets/reponsive.gif" alt="reponsive"> -->
         </a>
         <div>
           <h2></h2>
@@ -147,11 +139,17 @@
         <li><a href="https://github.com/mikenath223">Github</a></li>
         <li><a href="https://www.linkedin.com/in/michgolden-ukeje-73b01614b/">LinkedIn</a></li>
         <li><a href="">Codepen</a></li>
-        <li><a href="mailto:michgoldennathan17@gmail.com">Email</a></li>
+        <li><a class="ball-link" href="mailto:michgoldennathan17@gmail.com">Email</a></li>
       </ul>
     </section>
   </main>
   <script src="https://kit.fontawesome.com/81924b44b8.js" crossorigin="anonymous"></script>
+  <script>
+  document.querySelector('.ball').addEventListener('animationend', function(e){
+    e.target.firstChild.innerText = "GitHub";
+    e.target.classList.replace("ball", "expand");
+  }, false);
+  </script>
 </body>
 
 </html>
