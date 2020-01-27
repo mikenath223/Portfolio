@@ -9,7 +9,7 @@
     animation: slide ease-in-out infinite 2s; }
   .featured-project .feature-wrap {
     display: grid;
-    grid-template: 1fr 1fr/repeat(auto-fill, minmax(350px, 1fr));
+    grid-template: 1fr 1fr/repeat(3, minmax(350px, 1fr));
     justify-content: center;
     align-items: center; }
     .featured-project .feature-wrap .feature-proj {
@@ -49,12 +49,14 @@
     transform: translateY(-5px); }
   100% {
     transform: translateY(10px); } }
+@media only screen and (max-width: 800px) {
+  .featured-project {
+    margin-top: 50px; }
+    .featured-project .feature-wrap {
+      grid-template: repeat(6, 1fr)/1fr; } }
 @media only screen and (max-width: 400px) {
   .featured-project {
     padding: 0;
     margin: 0 auto; } }
-@media only screen and (max-width: 800px) {
-  .featured-project {
-    margin-top: 50px; } }
 
 /*# sourceMappingURL=feature.css.map */

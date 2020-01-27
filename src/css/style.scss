@@ -64,7 +64,7 @@ header {
   left: 10px;
   border: 3px solid #afe0ff;
   border-radius: 50%;
-  background-color: #ef6034;
+  background-color: rgba(7, 6, 6, 0.692);
   overflow: hidden;
   font-size: 25px;
   opacity: 0.1;
@@ -84,7 +84,7 @@ header {
   left: 10px;
   opacity: 0.3;
   font-size: 25px;
-  background-color: #ef6034;
+  background-color: rgba(7, 6, 6, 0.692);
   border-radius: 9px;
   z-index: 5;
   transition: all 0.2s ease-in-out;
@@ -142,18 +142,24 @@ header {
     .intro-personal {
       width: 40%;
       margin-top: 30px;
+      .taught {
+        background-color: red;
+        padding: 3px;
+        color: #fff;
+      }
       h1 {
         display: block;
-        transition: all 3s ease-in-out;
-        color: goldenrod;
+        transition: all 1.5s ease-in-out;
+        color: rgb(48, 44, 44);
+        margin-bottom: 12px;
       }
       * {
         margin: 3px;
       }
     }
-
     h2 {
       font-weight: 400;
+      margin: 5px 0;
     }
 
     h3 {

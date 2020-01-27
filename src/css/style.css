@@ -49,7 +49,7 @@ header {
   left: 10px;
   border: 3px solid #afe0ff;
   border-radius: 50%;
-  background-color: #ef6034;
+  background-color: rgba(7, 6, 6, 0.692);
   overflow: hidden;
   font-size: 25px;
   opacity: 0.1;
@@ -68,7 +68,7 @@ header {
   left: 10px;
   opacity: 0.3;
   font-size: 25px;
-  background-color: #ef6034;
+  background-color: rgba(7, 6, 6, 0.692);
   border-radius: 9px;
   z-index: 5;
   transition: all 0.2s ease-in-out;
@@ -106,14 +106,20 @@ header {
   .main-container .intro .intro-personal {
     width: 40%;
     margin-top: 30px; }
+    .main-container .intro .intro-personal .taught {
+      background-color: red;
+      padding: 3px;
+      color: #fff; }
     .main-container .intro .intro-personal h1 {
       display: block;
-      transition: all 3s ease-in-out;
-      color: goldenrod; }
+      transition: all 1.5s ease-in-out;
+      color: #302c2c;
+      margin-bottom: 12px; }
     .main-container .intro .intro-personal * {
       margin: 3px; }
   .main-container .intro h2 {
-    font-weight: 400; }
+    font-weight: 400;
+    margin: 5px 0; }
   .main-container .intro h3 {
     font-weight: 500; }
   .main-container .intro .passion::after {
