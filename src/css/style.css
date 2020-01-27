@@ -309,7 +309,7 @@ header {
       margin-top: 20px;
       padding: 0; }
     .main-container .intro .skill {
-      margin: 30px 0px; }
+      margin: 0 0 35px 0px; }
       .main-container .intro .skill h1 {
         text-align: center;
         padding-top: 50px; }
@@ -318,6 +318,15 @@ header {
         margin-left: 25px;
         width: 160px;
         height: 100px;
-        justify-content: flex-start; } }
+        justify-content: flex-start; }
+      .main-container .intro .skill::before {
+        width: 210px;
+        height: 210px;
+        right: 5px;
+        left: 2px;
+        bottom: -30px; }
+
+  .expand {
+    font-size: 20px; } }
 
 /*# sourceMappingURL=style.css.map */

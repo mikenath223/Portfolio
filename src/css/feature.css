@@ -65,7 +65,9 @@
   .featured-project {
     padding: 0;
     margin: 0 auto; }
-    .featured-project .feature-wrap .feature-proj {
-      background-size: contain; } }
+    .featured-project .feature-wrap {
+      grid-template: repeat(6, 1fr)/1fr; }
+      .featured-project .feature-wrap .feature-proj {
+        background-size: contain; } }
 
 /*# sourceMappingURL=feature.css.map */
