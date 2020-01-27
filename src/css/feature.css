@@ -2,92 +2,70 @@
   padding: 10px;
   margin-top: 100px;
   margin-bottom: 5%;
-  padding-left: 5%;
-}
-
-.featured-project a {
-  text-decoration: none;
-}
-
-.featured-project .fa-long-arrow-alt-down {
-  animation: slide ease-in-out infinite 2s;
-}
-
-.featured-project .feature-wrap {
-  display: grid;
-  grid-template: 1fr 1fr/repeat(3, minmax(350px, 1fr));
-  justify-content: center;
-  align-items: center;
-}
-
-.featured-project .feature-wrap .feature-proj {
-  height: 250px;
-  background: url(../assets/mixin-project.png) no-repeat;
-  background-size: cover;
-  box-shadow: 4px 4px 2px #65829948, -4px -4px 2px #ebffff5e;
-}
-
-.featured-project .feature-wrap .feature-proj figcaption {
-  width: 0;
-  height: 0;
-  opacity: 0;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.featured-project .feature-wrap .feature-proj figcaption * {
-  text-align: center;
-  margin-top: -40px;
-}
-
-.featured-project .feature-wrap .feature-proj figcaption h4 {
-  margin-top: 15px;
-  color: #e4e3e3;
-}
-
-.featured-project .feature-wrap .feature-proj figcaption .source-wrap {
-  width: 50%;
-  display: flex;
-  justify-content: space-around;
-  margin-top: 50px;
-}
-
-.featured-project .feature-wrap .feature-proj figcaption .source-wrap a {
-  border: 2px solid #fff;
-  border-radius: 10px;
-  padding: 7px;
-}
-
-.featured-project .feature-wrap .feature-proj:nth-child(2) {
-  background-image: url(../assets/);
-}
+  padding-left: 5%; }
+  .featured-project a {
+    text-decoration: none; }
+  .featured-project .fa-long-arrow-alt-down {
+    animation: slide ease-in-out infinite 2s; }
+  .featured-project .feature-wrap {
+    display: grid;
+    grid-template: 1fr 1fr/repeat(3, minmax(350px, 1fr));
+    justify-content: center;
+    align-items: center; }
+    .featured-project .feature-wrap .feature-proj {
+      height: 250px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      box-shadow: 4px 4px 2px #65829948, -4px -4px 2px #ebffff5e; }
+      .featured-project .feature-wrap .feature-proj figcaption {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        .featured-project .feature-wrap .feature-proj figcaption * {
+          text-align: center;
+          margin-top: -40px; }
+        .featured-project .feature-wrap .feature-proj figcaption h4 {
+          margin-top: 15px;
+          color: #e4e3e3; }
+        .featured-project .feature-wrap .feature-proj figcaption .source-wrap {
+          width: 50%;
+          display: flex;
+          justify-content: space-around;
+          margin-top: 50px; }
+          .featured-project .feature-wrap .feature-proj figcaption .source-wrap a {
+            border: 2px solid #fff;
+            border-radius: 10px;
+            padding: 7px; }
+      .featured-project .feature-wrap .feature-proj:nth-child(1) {
+        background-image: url(../assets/mixin-project.png); }
+      .featured-project .feature-wrap .feature-proj:nth-child(2) {
+        background-image: url(../assets/newsweek.png); }
+      .featured-project .feature-wrap .feature-proj:nth-child(3) {
+        background-image: url(../assets/calculator.png); }
 
 @keyframes slide {
   50% {
-    transform: translateY(-5px);
-  }
-
+    transform: translateY(-5px); }
   100% {
-    transform: translateY(10px);
-  }
-}
-
+    transform: translateY(10px); } }
+@media only screen and (max-width: 1024px) {
+  .featured-project .feature-wrap {
+    width: 95%; } }
 @media only screen and (max-width: 800px) {
   .featured-project {
-    margin-top: 50px;
-  }
-
-  .featured-project .feature-wrap {
-    grid-template: repeat(6, 1fr)/1fr;
-  }
-}
-
+    margin-top: 50px; }
+    .featured-project .feature-wrap {
+      grid-template: repeat(3, 1fr)/1fr 1fr; } }
 @media only screen and (max-width: 400px) {
   .featured-project {
     padding: 0;
-    margin: 0 auto;
-  }
-}
+    margin: 0 auto; }
+    .featured-project .feature-wrap .feature-proj {
+      background-size: contain; } }
+
+/*# sourceMappingURL=feature.css.map */

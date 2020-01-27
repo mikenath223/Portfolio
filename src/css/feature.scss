@@ -16,8 +16,8 @@
     align-items: center;
     .feature-proj {
       height: 250px;
-      background: url(../assets/mixin-project.png) no-repeat;
       background-size: cover;
+      background-repeat: no-repeat;
       box-shadow: 4px 4px 2px #65829948, -4px -4px 2px #ebffff5e;
       figcaption {
         width: 0;
@@ -50,8 +50,14 @@
           }
         }
       }
+      &:nth-child(1) {
+      background-image: url(../assets/mixin-project.png);
+      }
       &:nth-child(2) {
-        background-image: url(../assets/);
+        background-image: url(../assets/newsweek.png);
+      }
+      &:nth-child(3) {
+        background-image: url(../assets/calculator.png);
       }
       // &:hover figcaption {
       //   height: 100%;
@@ -73,12 +79,19 @@
   }
 }
 
+@media only screen and (max-width: 1024px) {
+  .featured-project {
+    .feature-wrap {
+      width: 95%;
+    }
+  }
+}
 
 @media only screen and (max-width: 800px) {
   .featured-project {
     margin-top: 50px;
     .feature-wrap {
-      grid-template: repeat(6, 1fr) / 1fr;
+      grid-template: repeat(3, 1fr) / 1fr 1fr;
       .feature-proj {
         figcaption {
           .source-wrap {
@@ -96,7 +109,7 @@
     margin: 0 auto;
     .feature-wrap {
       .feature-proj {
-        // width: 200px;
+        background-size: contain;
       }
     }
   }

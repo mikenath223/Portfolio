@@ -7,6 +7,7 @@ body {
   color: rgba(0, 0, 0, 0.75);
   letter-spacing: 1px;
   word-spacing: 1px;
+  overflow-x: hidden;
   &::-webkit-scrollbar {
     width: 15px;
   }
@@ -21,9 +22,9 @@ header {
   height: 40px;
   nav {
     height: 100%;
-    width: 15%;
-    margin-left: auto;
     margin-right: 30px;
+    margin-left: auto;
+    width: 190px;
     .line {
       height: 100%;
       span {
@@ -33,7 +34,7 @@ header {
         background: #ef6034;
       }
       .span1 {
-        width: 70px;
+        width: 50px;
         animation: line 2s linear;
       }
       .span2 {
@@ -48,6 +49,7 @@ header {
     ul {
       display: flex;
       list-style: none;
+      width: 200px;
       justify-content: space-between;
     }
   }
@@ -127,6 +129,19 @@ header {
     transform: translate(0, -700px) rotate(360deg);
   }
 }
+
+@keyframes rollInSmall {
+  from {
+    opacity: 0.8;
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, -530px) rotate(360deg);
+  }
+}
+
 
 .articles {
   padding-left: 5%;
@@ -253,7 +268,7 @@ header {
   }
 
   100% {
-    width: 70px;
+    width: 50px;
   }
 }
 
@@ -332,7 +347,6 @@ header {
 @media only screen and (max-width: 1024px) {
   header {
     nav {
-      width: 25%;
     }
   }
 
@@ -364,15 +378,6 @@ header {
 
   header {
     nav {
-      width: initial;
-      margin-left: 20px;
-      .line:first-child {
-        margin-left: 40%;
-      }
-      ul {
-        width: 250px;
-        margin-left: auto;
-      }
     }
   }
 
@@ -409,6 +414,9 @@ header {
       }
     }
   }
+  .ball {
+    animation: rollInSmall 3s forwards linear;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -416,10 +424,20 @@ header {
     font-size: 12px;
   }
 
+  header {
+    nav {
+      width: 120px;
+      ul {
+        margin: 0;
+        width: initial;
+      }
+    }
+  }
+
   .main-container {
     .intro {
       width: auto;
-      margin: 0;
+      margin: 15px 0;
       align-items: center;
       .intro-personal {
         width: 280px;
@@ -427,13 +445,16 @@ header {
         padding: 0;
       }
       .skill {
-        margin-left: 80px;
+        margin: 30px 0px;
         h1 {
+          text-align: center;
           padding-top: 50px;
         }
         .skill-tab {
           align-items: center;
           margin-left: 25px;
+          width: 160px;
+          height: 100px;
           justify-content: flex-start;
         }
       }
