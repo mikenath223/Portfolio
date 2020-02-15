@@ -3,11 +3,13 @@
 body {
   font-family: "Ubuntu", Verdana, sans-serif;
   font-size: 20px;
-  background-color: #d6edff36;
+  background-color: #d6edff59;
   color: rgba(0, 0, 0, 0.75);
   letter-spacing: 1px;
   word-spacing: 1px;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   &::-webkit-scrollbar {
     width: 15px;
   }
@@ -77,7 +79,7 @@ header {
   top: 20px;
   width: auto;
   border: 3px solid #afe0ff;
-  padding: 0 5px 2.5px 8px;
+  padding: 3px 5px 2px 5px;
   color: #fff;
   height: 35px;
   left: 10px;
@@ -141,7 +143,6 @@ header {
     transform: translate(0, -530px) rotate(360deg);
   }
 }
-
 
 .articles {
   padding-left: 5%;
@@ -230,16 +231,28 @@ header {
         content: "";
         display: block;
         position: absolute;
-        bottom: -80px;
-        right: 2px;
+        bottom: -48px;
+        right: -12px;
         z-index: -99;
-        background: linear-gradient(315deg, #afe0ff, #d5f1fe);
-        box-shadow: -10px -10px 30px #a9bfc9, 10px 10px 30px #e5ffff;
+        border-radius: 50px;
+        border-radius: 50px;
+        border-radius: 50px;
+        border-radius: 50px;
+background: #ffffff;
+box-shadow: inset 5px 5px 12px #adadad, 
+            inset -5px -5px 12px #ffffff;
+        // background: linear-gradient(145deg, #ffffff, #e6e6e6);
+        // box-shadow: 20px 20px 60px #d4d4d4, -20px -20px 60px #ffffff;
+        border-radius: 50px;
+        // background: linear-gradient(145deg, #ffffff, #e6e6e6);
+        // box-shadow: 5px 5px 12px #adadad, -5px -5px 12px #ffffff;
+        // background: linear-gradient(145deg, #e0f0ff, #bccad7);
+        // box-shadow: 20px 20px 60px #adbac6, -20px -20px 60px #f5ffff;
         width: 320px;
         height: 295px;
         transform-origin: 50% 48%;
         border-radius: 43%;
-        animation: drift 7s infinite linear;
+        animation: drift 7s infinite ease-in;
       }
 
       .skill-tab {
@@ -251,7 +264,6 @@ header {
         }
         p {
           padding: 2px;
-          border: 1px solid goldenrod;
           margin-bottom: 20px;
           font-weight: bold;
           text-align: center;
@@ -345,11 +357,6 @@ header {
 }
 
 @media only screen and (max-width: 1024px) {
-  header {
-    nav {
-    }
-  }
-
   .main-container {
     .intro {
       padding-left: 5%;
@@ -375,12 +382,6 @@ header {
   body {
     font-size: 16px;
   }
-
-  header {
-    nav {
-    }
-  }
-
   .main-container {
     .intro {
       margin-left: auto;
@@ -395,7 +396,7 @@ header {
         width: 100%;
       }
       .skill {
-        margin: 60px 10% 10px 50px;
+        margin: 90px 10% 10px 50px;
         width: 200px;
         .skill-tab {
           width: 200px;
@@ -409,7 +410,7 @@ header {
           width: 250px;
           height: 235px;
           left: -29px;
-          bottom: -10px;
+          bottom: 20px;
         }
       }
     }
@@ -460,8 +461,7 @@ header {
         &::before {
           width: 210px;
           height: 210px;
-          right: 5px;
-          left: 2px;
+          left: -10px;
           bottom: -30px;
         }
       }

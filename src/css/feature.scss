@@ -1,8 +1,7 @@
 .featured-project {
-  padding: 10px;
   margin-top: 100px;
   margin-bottom: 5%;
-  padding-left: 5%;
+  text-align: center;
   a {
     text-decoration: none;
   }
@@ -10,23 +9,37 @@
     animation: slide ease-in-out infinite 2s;
   }
   .feature-wrap {
+    margin-left: 0;
+    margin-right: 0;
     display: grid;
-    grid-template: 1fr 1fr / repeat(3, minmax(350px, 1fr));
+    grid-template: repeat(3, 1fr) / repeat(2, minmax(350px, 1fr));
     justify-content: center;
     align-items: center;
+    background-clip: padding-box;
     .feature-proj {
-      height: 250px;
+      display: flex;
+      justify-content: space-between;
+      height: 350px;
       background-size: cover;
       background-repeat: no-repeat;
       box-shadow: 4px 4px 2px #65829948, -4px -4px 2px #ebffff5e;
+      .img-wrap {
+        margin-top: 50px;
+        position: relative;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 300px;
+        width: auto;
+      }
       figcaption {
-        width: 0;
-        height: 0;
-        opacity: 0;
         color: #fff;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        margin-top: 40px;
+        justify-content: space-evenly;
+        align-items: space-around;
         flex-direction: column;
         // transform: scaleY(0);
         // transition: transform 0.7s, width 1.2s, height 1s;
@@ -39,10 +52,9 @@
           color: rgb(228, 227, 227);
         }
         .source-wrap {
-          width: 50%;
           display: flex;
           justify-content: space-around;
-          margin-top: 50px;
+          margin-top: 20px;
           a {
             border: 2px solid #fff;
             border-radius: 10px;
@@ -51,13 +63,22 @@
         }
       }
       &:nth-child(1) {
-      background-image: url(../assets/mixin-project.png);
+        background-color:rgb(1, 127, 163)
       }
       &:nth-child(2) {
-        background-image: url(../assets/newsweek.png);
+        background-color:rgb(98, 197, 200)
       }
       &:nth-child(3) {
-        background-image: url(../assets/calculator.png);
+        background-color:rgb(226, 129, 156)
+      }
+      &:nth-child(4) {
+        background-color:rgb(3, 6, 51);
+      }
+      &:nth-child(5) {
+        background-color:rgb(223, 244, 245)
+      }
+      &:nth-child(6) {
+        background-color:rgb(11, 176, 77)
       }
       // &:hover figcaption {
       //   height: 100%;
@@ -87,27 +108,20 @@
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 960px) {
   .featured-project {
     margin-top: 50px;
     .feature-wrap {
-      grid-template: repeat(3, 1fr) / 1fr 1fr;
-      .feature-proj {
-        figcaption {
-          .source-wrap {
-            // width: 80%;
-          }
-        }
-      }
+      grid-template: repeat(6, 1fr) / 1fr;
     }
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 420px) {
   .featured-project {
-    padding: 0;
     margin: 0 auto;
     .feature-wrap {
+      padding: 0;
       grid-template: repeat(6, 1fr) / 1fr;
       .feature-proj {
         background-size: contain;

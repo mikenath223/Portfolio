@@ -2,11 +2,13 @@
 body {
   font-family: "Ubuntu", Verdana, sans-serif;
   font-size: 20px;
-  background-color: #d6edff36;
+  background-color: #d6edff59;
   color: rgba(0, 0, 0, 0.75);
   letter-spacing: 1px;
   word-spacing: 1px;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
   body::-webkit-scrollbar {
     width: 15px; }
   body a {
@@ -64,7 +66,7 @@ header {
   top: 20px;
   width: auto;
   border: 3px solid #afe0ff;
-  padding: 0 5px 2.5px 8px;
+  padding: 3px 5px 2px 5px;
   color: #fff;
   height: 35px;
   left: 10px;
@@ -169,16 +171,21 @@ header {
       content: "";
       display: block;
       position: absolute;
-      bottom: -80px;
-      right: 2px;
+      bottom: -48px;
+      right: -12px;
       z-index: -99;
-      background: linear-gradient(315deg, #afe0ff, #d5f1fe);
-      box-shadow: -10px -10px 30px #a9bfc9, 10px 10px 30px #e5ffff;
+      border-radius: 50px;
+      border-radius: 50px;
+      border-radius: 50px;
+      border-radius: 50px;
+      background: #ffffff;
+      box-shadow: inset 5px 5px 12px #adadad, inset -5px -5px 12px #ffffff;
+      border-radius: 50px;
       width: 320px;
       height: 295px;
       transform-origin: 50% 48%;
       border-radius: 43%;
-      animation: drift 7s infinite linear; }
+      animation: drift 7s infinite ease-in; }
     .main-container .intro .skill .skill-tab {
       display: flex;
       justify-content: flex-end;
@@ -187,7 +194,6 @@ header {
         margin-right: 10px; }
       .main-container .intro .skill .skill-tab p {
         padding: 2px;
-        border: 1px solid goldenrod;
         margin-bottom: 20px;
         font-weight: bold;
         text-align: center;
@@ -274,7 +280,7 @@ header {
     .main-container .intro .intro-personal {
       width: 100%; }
     .main-container .intro .skill {
-      margin: 60px 10% 10px 50px;
+      margin: 90px 10% 10px 50px;
       width: 200px; }
       .main-container .intro .skill .skill-tab {
         width: 200px;
@@ -286,7 +292,7 @@ header {
         width: 250px;
         height: 235px;
         left: -29px;
-        bottom: -10px; }
+        bottom: 20px; }
 
   .ball {
     animation: rollInSmall 3s forwards linear; } }
@@ -322,8 +328,7 @@ header {
       .main-container .intro .skill::before {
         width: 210px;
         height: 210px;
-        right: 5px;
-        left: 2px;
+        left: -10px;
         bottom: -30px; }
 
   .expand {
