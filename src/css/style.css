@@ -295,6 +295,7 @@ header {
         bottom: 20px; }
 
   .ball {
+    z-index: 5;
     animation: rollInSmall 3s forwards linear; } }
 @media only screen and (max-width: 400px) {
   body {
