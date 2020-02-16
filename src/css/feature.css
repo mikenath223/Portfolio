@@ -135,6 +135,8 @@
     margin-top: 50px; }
     .featured-project .feature-wrap {
       grid-template: repeat(6, 1fr)/1fr; }
+      .featured-project .feature-wrap .feature-proj .img-wrap {
+        bottom: -3px; }
       .featured-project .feature-wrap .feature-proj figcaption {
         width: 40%;
         margin-right: 0; } }

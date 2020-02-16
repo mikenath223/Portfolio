@@ -211,6 +211,9 @@
     .feature-wrap {
       grid-template: repeat(6, 1fr) / 1fr;
       .feature-proj {
+        .img-wrap {
+          bottom: -3px;
+        }
         figcaption {
           width: 40%;
           margin-right: 0;
