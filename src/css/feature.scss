@@ -1,7 +1,9 @@
 .featured-project {
   margin-top: 100px;
   margin-bottom: 5%;
-  text-align: center;
+  .project-intro {
+    text-align: center;
+  }
   a {
     text-decoration: none;
   }
@@ -24,6 +26,7 @@
       background-repeat: no-repeat;
       box-shadow: 4px 4px 2px #65829948, -4px -4px 2px #ebffff5e;
       .img-wrap {
+        height: 300px;
         margin-top: 50px;
         position: relative;
         .proj-img {
@@ -34,16 +37,20 @@
       }
 
       figcaption {
-        color: #fff;
         display: flex;
         margin-top: 40px;
+        margin-right: 10%;
         justify-content: space-evenly;
         align-items: space-around;
         flex-direction: column;
+        color: #fff;
         // transform: scaleY(0);
         // transition: transform 0.7s, width 1.2s, height 1s;
         .icon-proj {
           vertical-align: middle;
+        }
+        .lang-stacks {
+          text-align: center;
         }
         h4 {
           margin-top: 15px;
@@ -84,6 +91,9 @@
       }
       &:nth-child(5) {
         background-color: rgb(223, 244, 245);
+        figcaption {
+          color: black;
+        }
       }
       &:nth-child(6) {
         background-color: rgb(11, 176, 77);
@@ -124,14 +134,50 @@
   }
 }
 
-@media only screen and (max-width: 420px) {
+
+@media only screen and (max-width: 800px) {
   .featured-project {
-    margin: 0 auto;
+    .feature-wrap {
+      .feature-proj {
+        .img-wrap {
+          margin-top: 14%;
+          height: 250px;
+          .proj-img {
+            height: 250px;
+          }
+        }
+        figcaption {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  .featured-project {
     .feature-wrap {
       padding: 0;
-      grid-template: repeat(6, 1fr) / 1fr;
+      width: 100%;
       .feature-proj {
-        background-size: contain;
+        margin: 16px 0px;
+        flex-direction: column-reverse;
+        align-items: center;
+        .img-wrap {
+          margin: 0;
+          width: 100%;
+          height: 150px;
+          .proj-img {
+            left: 25%;
+            bottom: 0;
+            width: 40%;
+            height: 150px;
+          }
+        }
+        figcaption {
+          height: 50%;
+          margin-top: 0px;
+        }
       }
     }
   }
