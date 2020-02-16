@@ -10,6 +10,7 @@ body {
   background-color: #d6edff52;
   color: #3b455f;
   letter-spacing: 1px;
+  line-height: 1;
   word-spacing: 1px;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -235,18 +236,12 @@ header {
         content: "";
         display: block;
         position: absolute;
-        bottom: -48px;
+        bottom: -78px;
         right: -12px;
         z-index: -99;
         border-radius: 50px;
         background: #ffffff;
         box-shadow: inset 5px 5px 12px #adadad, inset -5px -5px 12px #ffffff;
-        // background: linear-gradient(145deg, #ffffff, #e6e6e6);
-        // box-shadow: 20px 20px 60px #d4d4d4, -20px -20px 60px #ffffff;
-        // background: linear-gradient(145deg, #ffffff, #e6e6e6);
-        // box-shadow: 5px 5px 12px #adadad, -5px -5px 12px #ffffff;
-        // background: linear-gradient(145deg, #e0f0ff, #bccad7);
-        // box-shadow: 20px 20px 60px #adbac6, -20px -20px 60px #f5ffff;
         width: 320px;
         height: 295px;
         transform-origin: 50% 48%;

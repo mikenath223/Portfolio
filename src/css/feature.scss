@@ -16,7 +16,6 @@
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(2, minmax(350px, 1fr));
     justify-content: center;
-    align-items: center;
     background-clip: padding-box;
     .feature-proj {
       display: flex;
@@ -31,7 +30,9 @@
         position: relative;
         .proj-img {
           position: absolute;
-          height: 300px;
+          left: 0;
+          max-height: 300px;
+          bottom: 0;
           width: auto;
         }
       }
@@ -39,7 +40,8 @@
       figcaption {
         display: flex;
         margin-top: 40px;
-        margin-right: 10%;
+        margin-right: 15px;
+        width: 50%;
         justify-content: space-evenly;
         align-items: space-around;
         flex-direction: column;
@@ -51,6 +53,10 @@
         }
         .lang-stacks {
           text-align: center;
+          span {
+            border: 1px solid violet;
+            padding: 3px;
+          }
         }
         h4 {
           margin-top: 15px;
@@ -170,7 +176,6 @@
           .proj-img {
             left: 25%;
             bottom: 0;
-            width: 40%;
             height: 150px;
           }
         }
