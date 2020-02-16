@@ -24,12 +24,10 @@
       .featured-project .feature-wrap .feature-proj .img-wrap {
         margin-top: 50px;
         position: relative; }
-      .featured-project .feature-wrap .feature-proj img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 300px;
-        width: auto; }
+        .featured-project .feature-wrap .feature-proj .img-wrap .proj-img {
+          position: absolute;
+          height: 300px;
+          width: auto; }
       .featured-project .feature-wrap .feature-proj figcaption {
         color: #fff;
         display: flex;
@@ -37,9 +35,8 @@
         justify-content: space-evenly;
         align-items: space-around;
         flex-direction: column; }
-        .featured-project .feature-wrap .feature-proj figcaption * {
-          text-align: center;
-          margin-top: -40px; }
+        .featured-project .feature-wrap .feature-proj figcaption .icon-proj {
+          vertical-align: middle; }
         .featured-project .feature-wrap .feature-proj figcaption h4 {
           margin-top: 15px;
           color: #e4e3e3; }
@@ -48,9 +45,16 @@
           justify-content: space-around;
           margin-top: 20px; }
           .featured-project .feature-wrap .feature-proj figcaption .source-wrap a {
-            border: 2px solid #fff;
-            border-radius: 10px;
+            border-radius: 5px;
             padding: 7px; }
+            .featured-project .feature-wrap .feature-proj figcaption .source-wrap a:first-child {
+              color: #fff;
+              background: linear-gradient(145deg, #017293, #0188ae);
+              box-shadow: 3px 3px 5px #01566f, -3px -3px 5px #01a8d7; }
+            .featured-project .feature-wrap .feature-proj figcaption .source-wrap a:nth-child(2) {
+              color: #000;
+              background: #ffffff;
+              box-shadow: inset 5px 5px 12px #adadad, inset -5px -5px 12px #ffffff; }
       .featured-project .feature-wrap .feature-proj:nth-child(1) {
         background-color: #017fa3; }
       .featured-project .feature-wrap .feature-proj:nth-child(2) {
@@ -69,9 +73,6 @@
     transform: translateY(-5px); }
   100% {
     transform: translateY(10px); } }
-@media only screen and (max-width: 1024px) {
-  .featured-project .feature-wrap {
-    width: 95%; } }
 @media only screen and (max-width: 960px) {
   .featured-project {
     margin-top: 50px; }

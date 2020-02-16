@@ -26,14 +26,13 @@
       .img-wrap {
         margin-top: 50px;
         position: relative;
+        .proj-img {
+          position: absolute;
+          height: 300px;
+          width: auto;
+        }
       }
-      img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 300px;
-        width: auto;
-      }
+
       figcaption {
         color: #fff;
         display: flex;
@@ -43,9 +42,8 @@
         flex-direction: column;
         // transform: scaleY(0);
         // transition: transform 0.7s, width 1.2s, height 1s;
-        * {
-          text-align: center;
-          margin-top: -40px;
+        .icon-proj {
+          vertical-align: middle;
         }
         h4 {
           margin-top: 15px;
@@ -56,29 +54,39 @@
           justify-content: space-around;
           margin-top: 20px;
           a {
-            border: 2px solid #fff;
-            border-radius: 10px;
+            border-radius: 5px;
             padding: 7px;
+            &:first-child {
+              color: #fff;
+              background: linear-gradient(145deg, #017293, #0188ae);
+              box-shadow: 3px 3px 5px #01566f, -3px -3px 5px #01a8d7;
+            }
+            &:nth-child(2) {
+              color: #000;
+              background: #ffffff;
+              box-shadow: inset 5px 5px 12px #adadad,
+                inset -5px -5px 12px #ffffff;
+            }
           }
         }
       }
       &:nth-child(1) {
-        background-color:rgb(1, 127, 163)
+        background-color: rgb(1, 127, 163);
       }
       &:nth-child(2) {
-        background-color:rgb(98, 197, 200)
+        background-color: rgb(98, 197, 200);
       }
       &:nth-child(3) {
-        background-color:rgb(226, 129, 156)
+        background-color: rgb(226, 129, 156);
       }
       &:nth-child(4) {
-        background-color:rgb(3, 6, 51);
+        background-color: rgb(3, 6, 51);
       }
       &:nth-child(5) {
-        background-color:rgb(223, 244, 245)
+        background-color: rgb(223, 244, 245);
       }
       &:nth-child(6) {
-        background-color:rgb(11, 176, 77)
+        background-color: rgb(11, 176, 77);
       }
       // &:hover figcaption {
       //   height: 100%;
@@ -103,7 +111,6 @@
 @media only screen and (max-width: 1024px) {
   .featured-project {
     .feature-wrap {
-      width: 95%;
     }
   }
 }
