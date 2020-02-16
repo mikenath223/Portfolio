@@ -20,10 +20,31 @@
     .feature-proj {
       display: flex;
       justify-content: space-between;
+      position: relative;
       height: 350px;
       background-size: cover;
       background-repeat: no-repeat;
-      box-shadow: 4px 4px 2px #65829948, -4px -4px 2px #ebffff5e;
+      .backgd {
+        width: 85%;
+        height: 85%;
+        position: absolute;
+        right: -10px;
+        bottom: -10px;
+        z-index: -99;
+        opacity: 1;
+        transition: opacity 2s, height 1s, width 1s;
+        background-color: rgba(128, 128, 128, 0.5);
+      }
+      &:hover {
+        .backgd {
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+        }
+        .proj-img {
+          animation: scale 1s forwards ease-in-out;
+        }
+      }
       .img-wrap {
         height: 300px;
         margin-top: 50px;
@@ -66,6 +87,7 @@
           display: flex;
           justify-content: space-around;
           margin-top: 20px;
+          font-size: 14px;
           a {
             border-radius: 5px;
             padding: 7px;
@@ -85,6 +107,9 @@
       }
       &:nth-child(1) {
         background-color: rgb(1, 127, 163);
+        &::before {
+          background-color: rgb(98, 197, 200);
+        }
       }
       &:nth-child(2) {
         background-color: rgb(98, 197, 200);
@@ -115,6 +140,18 @@
   }
 }
 
+@keyframes scale {
+  from {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 @keyframes slide {
   50% {
     transform: translateY(-5px);
@@ -139,7 +176,6 @@
     }
   }
 }
-
 
 @media only screen and (max-width: 800px) {
   .featured-project {

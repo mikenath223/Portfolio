@@ -17,10 +17,26 @@
     .featured-project .feature-wrap .feature-proj {
       display: flex;
       justify-content: space-between;
+      position: relative;
       height: 350px;
       background-size: cover;
-      background-repeat: no-repeat;
-      box-shadow: 4px 4px 2px #65829948, -4px -4px 2px #ebffff5e; }
+      background-repeat: no-repeat; }
+      .featured-project .feature-wrap .feature-proj .backgd {
+        width: 85%;
+        height: 85%;
+        position: absolute;
+        right: -10px;
+        bottom: -10px;
+        z-index: -99;
+        opacity: 1;
+        transition: opacity 2s, height 1s, width 1s;
+        background-color: rgba(128, 128, 128, 0.5); }
+      .featured-project .feature-wrap .feature-proj:hover .backgd {
+        width: 100%;
+        height: 100%;
+        opacity: 0; }
+      .featured-project .feature-wrap .feature-proj:hover .proj-img {
+        animation: scale 1s forwards ease-in-out; }
       .featured-project .feature-wrap .feature-proj .img-wrap {
         height: 300px;
         margin-top: 50px;
@@ -53,7 +69,8 @@
         .featured-project .feature-wrap .feature-proj figcaption .source-wrap {
           display: flex;
           justify-content: space-around;
-          margin-top: 20px; }
+          margin-top: 20px;
+          font-size: 14px; }
           .featured-project .feature-wrap .feature-proj figcaption .source-wrap a {
             border-radius: 5px;
             padding: 7px; }
@@ -67,6 +84,8 @@
               box-shadow: inset 5px 5px 12px #adadad, inset -5px -5px 12px #ffffff; }
       .featured-project .feature-wrap .feature-proj:nth-child(1) {
         background-color: #017fa3; }
+        .featured-project .feature-wrap .feature-proj:nth-child(1)::before {
+          background-color: #62c5c8; }
       .featured-project .feature-wrap .feature-proj:nth-child(2) {
         background-color: #62c5c8; }
       .featured-project .feature-wrap .feature-proj:nth-child(3) {
@@ -80,6 +99,13 @@
       .featured-project .feature-wrap .feature-proj:nth-child(6) {
         background-color: #0bb04d; }
 
+@keyframes scale {
+  from {
+    transform: scale(0.8); }
+  50% {
+    transform: scale(1.2); }
+  to {
+    transform: scale(1); } }
 @keyframes slide {
   50% {
     transform: translateY(-5px); }
