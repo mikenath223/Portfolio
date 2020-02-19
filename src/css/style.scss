@@ -33,7 +33,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #d6edff52;
+  background-color: #d6edff80;
   clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 93%);
 }
 
@@ -47,6 +47,8 @@ header {
     margin-right: 50px;
     margin-left: auto;
     width: 190px;
+    z-index: 10;
+    position: relative;
     .line {
       height: 100%;
       span {
@@ -236,16 +238,15 @@ header {
 
     .skill {
       position: relative;
+      z-index: 12;
       margin-top: 60px;
       padding-right: 35px;
       h1 {
+      position: relative;
+      z-index: 14;
         margin-left: 40px;
         margin-bottom: 20px;
         color: #000000;
-        span {
-          background-color: goldenrod;
-          display: inline-block;
-        }
       }
 
       &::before {
@@ -254,7 +255,7 @@ header {
         position: absolute;
         bottom: -78px;
         right: -12px;
-        z-index: -99;
+        z-index: 9;
         border-radius: 50px;
         background: #ffffff;
         box-shadow: inset 5px 5px 12px #adadad, inset -5px -5px 12px #ffffff;
@@ -266,6 +267,8 @@ header {
       }
 
       .skill-tab {
+        position: relative;
+        z-index: 14;  
         display: flex;
         justify-content: flex-end;
         color: #000;
@@ -273,6 +276,8 @@ header {
           margin-right: 10px;
         }
         p {
+          position: relative;
+          z-index: 14;    
           padding: 2px;
           margin-bottom: 20px;
           font-weight: bold;

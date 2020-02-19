@@ -134,15 +134,13 @@
     .featured-project .feature-wrap {
       grid-template: repeat(6, 1fr)/1fr; }
       .featured-project .feature-wrap .feature-proj .img-wrap {
-        bottom: -3px; }
+        bottom: -6px; }
       .featured-project .feature-wrap .feature-proj figcaption {
         width: 40%;
         margin-right: 0; } }
 @media only screen and (max-width: 800px) {
   .featured-project {
     font-size: 14px; }
-    .featured-project .feature-wrap .feature-proj .img-wrap .proj-img {
-      height: 250px; }
     .featured-project .feature-wrap .feature-proj figcaption {
       width: 60%;
       margin-top: 0; } }
