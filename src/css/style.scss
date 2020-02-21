@@ -349,18 +349,20 @@ header {
   color: #fff;
   height: 200px;
   padding: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
   .greeting {
     .greet-head {
       display: inline;
       text-decoration: underline;
-      text-decoration-color: #ef6034;
+      text-decoration-color: #2196F3;
+      font-size: 26px;
     }
-
     .fa-comment-dots {
       position: relative;
       top: -20px;
-      font-size: 20px;
-      color: limegreen;
     }
   }
 
@@ -368,6 +370,11 @@ header {
     margin-top: 10px;
     padding-left: 20px;
     list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    min-width: 80%;
+    font-size: 28px;
   }
 }
 
@@ -434,6 +441,19 @@ header {
     z-index: 5;
     animation: rollInSmall 3s forwards linear;
   }
+  .contact {
+    height: 300px;
+    .contact-list {
+      font-size: 20px;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 250px;
+    }
+    .greeting {
+      margin-bottom: 20px;
+    }
+  }
+
 }
 
 @media only screen and (max-width: 400px) {
@@ -485,5 +505,10 @@ header {
   }
   .expand {
     font-size: 20px;
+  }
+  .contact {
+    .contact-list {
+      font-size: 16px;
+    }
   }
 }
