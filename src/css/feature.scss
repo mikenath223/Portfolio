@@ -1,18 +1,21 @@
+$feature-proj-bg: #f6f8fc;
+
 @mixin neumorphic {
   border-radius: 20px;
-  background-color: #f6f8fc;
+  background-color: $feature-proj-bg;
   box-shadow: inset 9px 9px 18px #cfcdcd, inset -9px -9px 18px #ffffff;
   border: 5px solid rgba(255, 255, 255, 0.7);
 }
 
 @mixin neumorphic-first-link {
-  box-shadow: 6px 6px 16px 0 rgba(217,210,200, 0.51), -6px -6px 16px 0 rgba(255,255,255, 0.43);
+  box-shadow: 6px 6px 16px 0 rgba(217, 210, 200, 0.51),
+    -6px -6px 16px 0 rgba(255, 255, 255, 0.43);
 }
 
 @mixin insetNeumorphic {
-  box-shadow: inset 6px 6px 5px 0 rgba(217,210,200, 0.51), inset -6px -6px 5px 0 rgba(255,255,255, 0.43);
+  box-shadow: inset 6px 6px 5px 0 rgba(217, 210, 200, 0.51),
+    inset -6px -6px 5px 0 rgba(255, 255, 255, 0.43);
 }
-
 
 .featured-project {
   margin-top: 100px;
@@ -101,7 +104,7 @@
           margin-top: 20px;
           font-size: 14px;
           a {
-            border: 3px solid rgba(255,255,255, 0.43);
+            border: 3px solid rgba(255, 255, 255, 0.43);
             border-radius: 5px;
             padding: 7px;
             transition: 0.5s all ease-in-out;
@@ -112,8 +115,7 @@
             }
             &:nth-child(2) {
               background: #ffffff;
-              box-shadow: inset 3px 3px 5px #adadad,
-                inset -3px -3px 5px #ffffff;
+              box-shadow: inset 3px 3px 5px #adadad, inset -3px -3px 5px #ffffff;
             }
           }
         }
@@ -186,6 +188,7 @@
 @media only screen and (max-width: 730px) {
   .featured-project {
     font-size: 12px;
+    padding: 0 10px;
     .feature-wrap {
       padding: 0;
       width: 100%;
@@ -224,10 +227,14 @@
             width: 80%;
             margin: auto;
             text-align: center;
+            position: relative;
+            opacity: 1;
+            // animation: img-hold 5s infinite 2s iteration-count direction fill-mode;
           }
           .proj-img-mobile {
             width: auto;
             max-height: 300px;
+            animation: img-hold 5s infinite 5s linear;
           }
         }
         .lang-mobil {
@@ -237,7 +244,61 @@
         }
         p.proj-desc-mobile {
           height: 0px;
-          visibility: hidden;
+          overflow: hidden;
+          position: absolute;
+          top: 50px;
+          font-size: 18px;
+          left: 0;
+          z-index: 55;
+          background-color: $feature-proj-bg;
+          transition: height 2s;
+          animation: p-info 5s infinite 5s linear;
+        }
+      }
+    }
+  }
+
+  @keyframes p-info {
+    from {
+      opacity: 0;
+      height: 0px;
+    }
+    30% {
+      opacity: 1;
+      height: 220px;
+    }
+    to {
+      opacity: 1;
+      height: 220px;
+    }
+  }
+
+  @keyframes img-hold {
+    from {
+      opacity: 1;
+      transform: rotate3d(0, 1, 0, 90deg);
+    }
+    30% {
+      opacity: 0;
+      transform: rotate3d(0, 1, 0, 180deg);
+    }
+    to {
+      opacity: 0;
+      transform: rotate3d(0, 1, 0, 180deg);      
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .featured-project {
+    .feature-wrap {
+      .feature-proj {
+        .info-wrap-mobile {
+          .lang-mobil {
+            span {
+              font-size: 10px;
+            }
+          }
         }
       }
     }
