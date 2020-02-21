@@ -1,7 +1,24 @@
+@mixin neumorphic {
+  border-radius: 20px;
+  background-color: #f6f8fc;
+  box-shadow: inset 9px 9px 18px #cfcdcd, inset -9px -9px 18px #ffffff;
+  border: 5px solid rgba(255, 255, 255, 0.7);
+}
+
+@mixin neumorphic-first-link {
+  box-shadow: 6px 6px 16px 0 rgba(217,210,200, 0.51), -6px -6px 16px 0 rgba(255,255,255, 0.43);
+}
+
+@mixin insetNeumorphic {
+  box-shadow: inset 6px 6px 5px 0 rgba(217,210,200, 0.51), inset -6px -6px 5px 0 rgba(255,255,255, 0.43);
+}
+
+
 .featured-project {
   margin-top: 100px;
   margin-bottom: 5%;
   overflow-x: hidden;
+  background-color: #f6f8fc;
   .project-intro {
     text-align: center;
   }
@@ -19,38 +36,25 @@
     justify-content: center;
     background-clip: padding-box;
     .feature-proj {
+      @include neumorphic;
       display: flex;
       justify-content: space-between;
       position: relative;
-      height: 350px;
+      height: 400px;
       background-size: cover;
       background-repeat: no-repeat;
-      .backgd {
-        width: 85%;
-        height: 85%;
-        position: absolute;
-        right: -10px;
-        bottom: -10px;
-        z-index: -99;
-        opacity: 1;
-        transition: opacity 2s, height 1s, width 1s;
-        background-color: rgba(128, 128, 128, 0.5);
-      }
       &:hover {
-        .backgd {
-          width: 100%;
-          height: 100%;
-          opacity: 0;
-        }
         .proj-img {
-          animation: scale 1s forwards ease-in-out;
+          animation: scale 1.5s forwards linear;
         }
       }
       .img-wrap {
         height: 100%;
         position: relative;
         overflow: hidden;
-        width: 40%;
+        width: 35%;
+        left: 15px;
+        bottom: 5px;
         .proj-img {
           position: absolute;
           left: 0;
@@ -67,15 +71,24 @@
         justify-content: space-evenly;
         align-items: space-around;
         flex-direction: column;
-        color: #fff;
+        width: 62%;
+        p {
+          font-family: Helvetica, sans-serif;
+          font-size: 17px;
+          font-weight: 500;
+          line-height: 1.5;
+          word-spacing: 1.5px;
+          color: #3c455c;
+        }
         .icon-proj {
           vertical-align: middle;
         }
         .lang-stacks {
-          text-align: center;
           span {
+            font-size: 15px;
             border: 2px solid skyblue;
             padding: 3px;
+            margin-right: 10px;
           }
         }
         h4 {
@@ -88,94 +101,26 @@
           margin-top: 20px;
           font-size: 14px;
           a {
+            border: 3px solid rgba(255,255,255, 0.43);
             border-radius: 5px;
             padding: 7px;
+            transition: 0.5s all ease-in-out;
+            background-color: #f6f8fc;
+            font-weight: 600;
             &:first-child {
-              color: #fff;
-              background: linear-gradient(145deg, #017293, #0188ae);
-              box-shadow: 3px 3px 7px #01566f, -3px -7px 5px #01a8d7;
+              @include neumorphic-first-link;
             }
             &:nth-child(2) {
-              color: #000;
               background: #ffffff;
-              box-shadow: inset 5px 5px 12px #adadad,
-                inset -5px -5px 12px #ffffff;
+              box-shadow: inset 3px 3px 5px #adadad,
+                inset -3px -3px 5px #ffffff;
             }
           }
         }
       }
       &:nth-child(1) {
-        background-color: rgb(1, 127, 163);
-        &::before {
-          background-color: rgb(98, 197, 200);
-        }
+        @include neumorphic;
       }
-      &:nth-child(2) {
-        background-color: rgb(98, 197, 200);
-        .source-wrap {
-          a {
-            &:first-child {
-              background: #62c5c8;
-              box-shadow: 3px 3px 7px #438688, -3px -3px 7px #81ffff;
-            }
-          }
-        }
-      }
-      &:nth-child(3) {
-        background-color: rgb(226, 129, 156);
-        .source-wrap {
-          a {
-            &:first-child {
-              background: #e2819c;
-              box-shadow: 3px 3px 7px #9a586a, -3px -3px 7px #ffaace;
-            }
-          }
-        }
-      }
-      &:nth-child(4) {
-        background-color: rgb(3, 6, 51);
-        .source-wrap {
-          a {
-            &:first-child {
-              background: #030633;
-              box-shadow: 3px 3px 7px #020423, -3px -3px 7px #040843;
-            }
-          }
-        }
-      }
-      &:nth-child(5) {
-        background-color: rgb(223, 244, 245);
-        .source-wrap {
-          a {
-            &:first-child {
-              color: #000;
-              background: #dff4f5;
-              box-shadow: 3px 3px 7px #98a6a7, -3px -3px 7px #ffffff;
-            }
-          }
-        }
-        figcaption {
-          color: #000;
-        }
-      }
-      &:nth-child(6) {
-        background-color: rgb(11, 176, 77);
-        .source-wrap {
-          a {
-            &:first-child {
-              background: #0bb04d;
-              box-shadow: 3px 3px 7px #077834, -3px -3px 7px #0fe866;
-            }
-          }
-        }
-      }
-      // &:hover figcaption {
-      //   height: 100%;
-      //   width: 100%;
-      //   opacity: 0.8;
-      //   transform: scaleY(1);
-      //   background-color: #7510f7;
-      // }
     }
   }
 }
@@ -207,9 +152,6 @@
     .feature-wrap {
       grid-template: repeat(6, 1fr) / 1fr;
       .feature-proj {
-        .img-wrap {
-          bottom: -6px;
-        }
         figcaption {
           width: 40%;
           margin-right: 0;
@@ -244,6 +186,7 @@
       padding: 0;
       width: 100%;
       .feature-proj {
+        height: 500px;
         margin: 16px 0px;
         flex-direction: column-reverse;
         align-items: center;
