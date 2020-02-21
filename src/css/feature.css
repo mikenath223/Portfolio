@@ -157,7 +157,7 @@
           .featured-project .feature-wrap .feature-proj .info-wrap-mobile .proj-img-mobile {
             width: auto;
             max-height: 300px;
-            animation: img-hold 5s infinite 5s linear; }
+            animation: img-hold 12s infinite 5s linear; }
         .featured-project .feature-wrap .feature-proj .lang-mobil {
           display: flex;
           justify-content: space-evenly;
@@ -172,28 +172,34 @@
           z-index: 55;
           background-color: #f6f8fc;
           transition: height 2s;
-          animation: p-info 5s infinite 5s linear; }
+          animation: p-info 12s infinite 5s linear; }
 
   @keyframes p-info {
     from {
       opacity: 0;
       height: 0px; }
-    30% {
+    30%, 50% {
       opacity: 1;
       height: 220px; }
+    70%, 90% {
+      opacity: 0;
+      height: 0px; }
     to {
-      opacity: 1;
-      height: 220px; } }
+      opacity: 0;
+      height: 0px; } }
   @keyframes img-hold {
     from {
       opacity: 1;
       transform: rotate3d(0, 1, 0, 90deg); }
-    30% {
+    30%, 50% {
       opacity: 0;
       transform: rotate3d(0, 1, 0, 180deg); }
+    70%, 90% {
+      opacity: 1;
+      transform: rotate3d(0, 1, 0, 360deg); }
     to {
-      opacity: 0;
-      transform: rotate3d(0, 1, 0, 180deg); } } }
+      opacity: 1;
+      transform: rotate3d(0, 1, 0, 360deg); } } }
 @media only screen and (max-width: 400px) {
   .featured-project .feature-wrap .feature-proj .info-wrap-mobile .lang-mobil span {
     font-size: 10px; } }

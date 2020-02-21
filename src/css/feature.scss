@@ -234,7 +234,7 @@ $feature-proj-bg: #f6f8fc;
           .proj-img-mobile {
             width: auto;
             max-height: 300px;
-            animation: img-hold 5s infinite 5s linear;
+            animation: img-hold 12s infinite 5s linear;
           }
         }
         .lang-mobil {
@@ -252,7 +252,7 @@ $feature-proj-bg: #f6f8fc;
           z-index: 55;
           background-color: $feature-proj-bg;
           transition: height 2s;
-          animation: p-info 5s infinite 5s linear;
+          animation: p-info 12s infinite 5s linear;
         }
       }
     }
@@ -263,13 +263,18 @@ $feature-proj-bg: #f6f8fc;
       opacity: 0;
       height: 0px;
     }
-    30% {
+    30%, 50% {
       opacity: 1;
       height: 220px;
     }
+
+    70%, 90% {
+      opacity: 0;
+      height: 0px;
+    }
     to {
-      opacity: 1;
-      height: 220px;
+      opacity: 0;
+      height: 0px;
     }
   }
 
@@ -278,13 +283,17 @@ $feature-proj-bg: #f6f8fc;
       opacity: 1;
       transform: rotate3d(0, 1, 0, 90deg);
     }
-    30% {
+    30%, 50% {
       opacity: 0;
       transform: rotate3d(0, 1, 0, 180deg);
     }
+    70%, 90% {
+      opacity: 1;
+      transform: rotate3d(0, 1, 0, 360deg);
+    }
     to {
-      opacity: 0;
-      transform: rotate3d(0, 1, 0, 180deg);      
+      opacity: 1;
+      transform: rotate3d(0, 1, 0, 360deg);      
     }
   }
 }
