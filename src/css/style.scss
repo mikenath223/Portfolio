@@ -109,7 +109,7 @@ header {
   font-size: 25px;
   background-color: rgba(7, 6, 6, 0.692);
   border-radius: 9px;
-  z-index: 5;
+  z-index: 99;
   transition: all 0.2s ease-in-out;
   animation: expand 0.5s forwards ease-out;
   &:hover {

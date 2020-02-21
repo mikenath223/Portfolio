@@ -50,7 +50,7 @@
         align-items: space-around;
         flex-direction: column;
         width: 62%; }
-        .featured-project .feature-wrap .feature-proj figcaption p {
+        .featured-project .feature-wrap .feature-proj figcaption p.proj-desc {
           font-family: Helvetica, sans-serif;
           font-size: 17px;
           font-weight: 500;
@@ -64,9 +64,6 @@
           border: 2px solid skyblue;
           padding: 3px;
           margin-right: 10px; }
-        .featured-project .feature-wrap .feature-proj figcaption h4 {
-          margin-top: 15px;
-          color: #e4e3e3; }
         .featured-project .feature-wrap .feature-proj figcaption .source-wrap {
           display: flex;
           justify-content: space-around;
@@ -102,6 +99,9 @@
     transform: translateY(-5px); }
   100% {
     transform: translateY(10px); } }
+.mobile {
+  display: none; }
+
 @media only screen and (max-width: 960px) {
   .featured-project {
     margin-top: 50px; }
@@ -135,8 +135,31 @@
             bottom: 0;
             height: 150px; }
         .featured-project .feature-wrap .feature-proj figcaption {
-          width: 90%;
-          height: 50%;
-          margin-top: 0px; } }
+          width: 100%;
+          height: 90%;
+          margin-bottom: 10px; }
+          .featured-project .feature-wrap .feature-proj figcaption h3 {
+            font-size: 18px;
+            text-align: center; }
+        .featured-project .feature-wrap .feature-proj .proj-large {
+          display: none; }
+        .featured-project .feature-wrap .feature-proj .mobile {
+          display: initial; }
+        .featured-project .feature-wrap .feature-proj .info-wrap-mobile {
+          margin: auto; }
+          .featured-project .feature-wrap .feature-proj .info-wrap-mobile .img-center {
+            width: 80%;
+            margin: auto;
+            text-align: center; }
+          .featured-project .feature-wrap .feature-proj .info-wrap-mobile .proj-img-mobile {
+            width: auto;
+            max-height: 300px; }
+        .featured-project .feature-wrap .feature-proj .lang-mobil {
+          display: flex;
+          justify-content: space-evenly;
+          word-break: break-all; }
+        .featured-project .feature-wrap .feature-proj p.proj-desc-mobile {
+          height: 0px;
+          visibility: hidden; } }
 
 /*# sourceMappingURL=feature.css.map */
