@@ -136,7 +136,7 @@ header {
   50% {
     opacity: 0.6;
   }
-  
+
   to {
     opacity: 1;
   }
@@ -159,7 +159,7 @@ header {
     opacity: 0.8;
     transform: translate(0, 0) rotate(0deg);
   }
-  
+
   to {
     opacity: 1;
     transform: translate(0, -530px) rotate(360deg);
@@ -168,7 +168,7 @@ header {
 
 .articles {
   padding-left: 5%;
-  
+
   .article-one {
     display: block;
     text-decoration: none;
@@ -179,8 +179,9 @@ header {
     width: 60%;
     margin: auto;
     .article-img {
-      max-height: 250px;
-      width: auto;
+      width: 100%;
+      max-width: 500px;
+      height: auto;
     }
   }
 
@@ -243,8 +244,8 @@ header {
       margin-top: 60px;
       padding-right: 35px;
       h1 {
-      position: relative;
-      z-index: 14;
+        position: relative;
+        z-index: 14;
         margin-left: 40px;
         margin-bottom: 20px;
         color: #000000;
@@ -258,7 +259,8 @@ header {
         right: -12px;
         z-index: 9;
         border-radius: 50px;
-        background: url(../assets/brackets.png) center / contain no-repeat #ffffff;
+        background: url(../assets/brackets.png) center / contain no-repeat
+          #ffffff;
         box-shadow: inset 5px 5px 12px #adadad, inset -5px -5px 12px #ffffff;
         width: 320px;
         height: 295px;
@@ -269,7 +271,7 @@ header {
 
       .skill-tab {
         position: relative;
-        z-index: 14;  
+        z-index: 14;
         display: flex;
         justify-content: flex-end;
         color: #000;
@@ -278,7 +280,7 @@ header {
         }
         p {
           position: relative;
-          z-index: 14;    
+          z-index: 14;
           padding: 2px;
           margin-bottom: 20px;
           font-weight: bold;
@@ -358,7 +360,7 @@ header {
     .greet-head {
       display: inline;
       text-decoration: underline;
-      text-decoration-color: #2196F3;
+      text-decoration-color: #2196f3;
       font-size: 26px;
     }
     .fa-comment-dots {
@@ -454,7 +456,6 @@ header {
       margin-bottom: 20px;
     }
   }
-
 }
 
 @media only screen and (max-width: 400px) {

@@ -153,7 +153,7 @@
             text-align: center;
             position: relative;
             opacity: 1; }
-          .featured-project .feature-wrap .feature-proj .info-wrap-mobile .proj-img-mobile {
+          .featured-project .feature-wrap .feature-proj .info-wrap-mobile .proj-img-mobile:not(:last-child) {
             width: auto;
             max-height: 300px;
             animation: img-hold 12s infinite 5s linear; }
@@ -161,7 +161,7 @@
           display: flex;
           justify-content: space-evenly;
           word-break: break-all; }
-        .featured-project .feature-wrap .feature-proj p.proj-desc-mobile {
+        .featured-project .feature-wrap .feature-proj p.proj-desc-mobile:not(:last-child) {
           height: 0px;
           overflow: hidden;
           position: absolute;

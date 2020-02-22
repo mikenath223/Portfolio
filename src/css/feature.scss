@@ -227,7 +227,7 @@ $feature-proj-bg: #f6f8fc;
             opacity: 1;
             // animation: img-hold 5s infinite 2s iteration-count direction fill-mode;
           }
-          .proj-img-mobile {
+          .proj-img-mobile:not(:last-child) {
             width: auto;
             max-height: 300px;
             animation: img-hold 12s infinite 5s linear;
@@ -238,7 +238,7 @@ $feature-proj-bg: #f6f8fc;
           justify-content: space-evenly;
           word-break: break-all;
         }
-        p.proj-desc-mobile {
+        p.proj-desc-mobile:not(:last-child) {
           height: 0px;
           overflow: hidden;
           position: absolute;
