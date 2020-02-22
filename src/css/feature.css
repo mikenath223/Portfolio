@@ -140,7 +140,8 @@
             font-size: 18px;
             text-align: center; }
           .featured-project .feature-wrap .feature-proj figcaption .source-wrap {
-            margin: 0 0 15px 0; }
+            margin: 0 0 15px 0;
+            font-size: 11px; }
         .featured-project .feature-wrap .feature-proj .proj-large {
           display: none; }
         .featured-project .feature-wrap .feature-proj .mobile {
@@ -153,15 +154,17 @@
             text-align: center;
             position: relative;
             opacity: 1; }
-          .featured-project .feature-wrap .feature-proj .info-wrap-mobile .proj-img-mobile:not(:last-child) {
+          .featured-project .feature-wrap .feature-proj .info-wrap-mobile .proj-img-mobile {
             width: auto;
             max-height: 300px;
             animation: img-hold 12s infinite 5s linear; }
+          .featured-project .feature-wrap .feature-proj .info-wrap-mobile .not-anime {
+            animation: none; }
         .featured-project .feature-wrap .feature-proj .lang-mobil {
           display: flex;
           justify-content: space-evenly;
           word-break: break-all; }
-        .featured-project .feature-wrap .feature-proj p.proj-desc-mobile:not(:last-child) {
+        .featured-project .feature-wrap .feature-proj p.proj-desc-mobile {
           height: 0px;
           overflow: hidden;
           position: absolute;
@@ -181,7 +184,8 @@
     50%,
     70% {
       opacity: 1;
-      height: 220px; }
+      height: max-content;
+      padding-top: 30%; }
     80%,
     to {
       opacity: 0;
