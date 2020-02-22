@@ -94,10 +94,6 @@ $feature-proj-bg: #f6f8fc;
             margin-right: 10px;
           }
         }
-        // h4 {
-        //   margin-top: 15px;
-        //   color: rgb(228, 227, 227);
-        // }
         .source-wrap {
           display: flex;
           justify-content: space-around;
@@ -214,6 +210,9 @@ $feature-proj-bg: #f6f8fc;
             font-size: 18px;
             text-align: center;
           }
+          .source-wrap {
+            margin: 0;
+          }
         }
         .proj-large {
           display: none;
@@ -246,7 +245,7 @@ $feature-proj-bg: #f6f8fc;
           height: 0px;
           overflow: hidden;
           position: absolute;
-          top: 50px;
+          top: 0px;
           font-size: 18px;
           left: 0;
           z-index: 55;
@@ -263,15 +262,13 @@ $feature-proj-bg: #f6f8fc;
       opacity: 0;
       height: 0px;
     }
-    30%, 50% {
+    30%,
+    50%,
+    70% {
       opacity: 1;
       height: 220px;
     }
-
-    70%, 90% {
-      opacity: 0;
-      height: 0px;
-    }
+    80%,
     to {
       opacity: 0;
       height: 0px;
@@ -283,17 +280,20 @@ $feature-proj-bg: #f6f8fc;
       opacity: 1;
       transform: rotate3d(0, 1, 0, 90deg);
     }
-    30%, 50% {
+    30%,
+    50%,
+    70% {
       opacity: 0;
       transform: rotate3d(0, 1, 0, 180deg);
     }
-    70%, 90% {
+    80%,
+    90% {
       opacity: 1;
       transform: rotate3d(0, 1, 0, 360deg);
     }
     to {
       opacity: 1;
-      transform: rotate3d(0, 1, 0, 360deg);      
+      transform: rotate3d(0, 1, 0, 360deg);
     }
   }
 }
@@ -303,8 +303,12 @@ $feature-proj-bg: #f6f8fc;
     .feature-wrap {
       .feature-proj {
         .info-wrap-mobile {
+          width: 100%;
           .lang-mobil {
+            margin: auto;
+            width: 98%;
             span {
+              margin: 0;
               font-size: 10px;
             }
           }
