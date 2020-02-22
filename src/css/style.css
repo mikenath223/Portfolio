@@ -128,7 +128,8 @@ header {
     opacity: 1;
     transform: translate(0, -530px) rotate(360deg); } }
 .articles {
-  padding-left: 5%; }
+  padding-left: 5%;
+  margin-bottom: 80px; }
   .articles .article-one {
     display: block;
     text-decoration: none;
@@ -137,11 +138,11 @@ header {
     margin: auto; }
     .articles .article-one * {
       margin-bottom: 20px; }
-    .articles .article-one img {
-      max-width: 100%;
-      height: auto; }
+    .articles .article-one .article-img {
+      max-height: 250px;
+      width: auto; }
   .articles time {
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(10, 16, 54, 0.8);
     font-size: 18px; }
 
 .main-container .intro {
@@ -196,7 +197,7 @@ header {
       right: -12px;
       z-index: 9;
       border-radius: 50px;
-      background: #ffffff;
+      background: url(../assets/brackets.png) center/contain no-repeat #ffffff;
       box-shadow: inset 5px 5px 12px #adadad, inset -5px -5px 12px #ffffff;
       width: 320px;
       height: 295px;

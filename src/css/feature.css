@@ -1,6 +1,5 @@
 .featured-project {
-  margin-top: 100px;
-  margin-bottom: 5%;
+  margin: 100px 10px 5% 10px;
   overflow-x: hidden;
   background-color: #f6f8fc; }
   .featured-project .project-intro {
@@ -10,8 +9,6 @@
   .featured-project .fa-long-arrow-alt-down {
     animation: slide ease-in-out infinite 2s; }
   .featured-project .feature-wrap {
-    margin-left: 0;
-    margin-right: 0;
     display: grid;
     grid-template: repeat(3, 1fr)/repeat(2, minmax(350px, 1fr));
     justify-content: center;
@@ -143,7 +140,7 @@
             font-size: 18px;
             text-align: center; }
           .featured-project .feature-wrap .feature-proj figcaption .source-wrap {
-            margin: 0; }
+            margin: 0 0 15px 0; }
         .featured-project .feature-wrap .feature-proj .proj-large {
           display: none; }
         .featured-project .feature-wrap .feature-proj .mobile {
