@@ -1,5 +1,6 @@
 .featured-project {
-  margin: 100px 10px 5% 10px;
+  margin: 100px 0 5% 0;
+  padding: 0 10px;
   overflow-x: hidden;
   background-color: #f6f8fc; }
   .featured-project .project-intro {
@@ -147,7 +148,8 @@
         .featured-project .feature-wrap .feature-proj .mobile {
           display: initial; }
         .featured-project .feature-wrap .feature-proj .info-wrap-mobile {
-          margin: auto; }
+          margin: auto;
+          width: 100%; }
           .featured-project .feature-wrap .feature-proj .info-wrap-mobile .img-center {
             width: 80%;
             margin: auto;
@@ -163,7 +165,7 @@
         .featured-project .feature-wrap .feature-proj .lang-mobil {
           display: flex;
           justify-content: space-evenly;
-          word-break: break-all; }
+          margin-left: 10px; }
         .featured-project .feature-wrap .feature-proj p.proj-desc-mobile {
           height: 0px;
           overflow: hidden;
