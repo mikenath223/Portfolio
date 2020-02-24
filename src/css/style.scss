@@ -626,4 +626,7 @@ input:checked + .slider:before {
     height: 19px;
     bottom: 2px;
   }
+  input:checked + .slider:before {
+    transform: translateX(17px);
+  }  
 }
