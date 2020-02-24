@@ -221,13 +221,15 @@
       opacity: 1;
       transform: rotate3d(0, 1, 0, 360deg); } } }
 @media only screen and (max-width: 400px) {
-  .featured-project .feature-wrap .feature-proj .info-wrap-mobile {
-    width: 100%; }
-    .featured-project .feature-wrap .feature-proj .info-wrap-mobile .lang-mobil {
-      margin: auto;
-      width: 98%; }
-      .featured-project .feature-wrap .feature-proj .info-wrap-mobile .lang-mobil span {
-        margin: 0;
-        font-size: 10px; } }
+  .featured-project {
+    margin-top: 80px; }
+    .featured-project .feature-wrap .feature-proj .info-wrap-mobile {
+      width: 100%; }
+      .featured-project .feature-wrap .feature-proj .info-wrap-mobile .lang-mobil {
+        margin: auto;
+        width: 98%; }
+        .featured-project .feature-wrap .feature-proj .info-wrap-mobile .lang-mobil span {
+          margin: 0;
+          font-size: 10px; } }
 
 /*# sourceMappingURL=feature.css.map */

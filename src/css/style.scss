@@ -183,13 +183,13 @@ header {
   position: absolute;
   right: 0;
   top: 0;
-  transition: 0.4s;
+  transition: all 0.4s;
   border: 2px solid var(--slider-border);
 }
 
 .slider:before {
   background-color: #fff;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
   border: 1px solid #2196f3;
   bottom: 4px;
   content: "";
@@ -199,6 +199,7 @@ header {
   position: absolute;
   transition: 0.4s;
   width: 22px;
+  border-radius: 50%;
 }
 
 input:checked + .slider {
@@ -214,12 +215,8 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-.slider.round {
+.round {
   border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
 }
 
 @keyframes expand {
@@ -571,6 +568,7 @@ input:checked + .slider:before {
   header {
     nav {
       width: 120px;
+      margin-right: 20px;
       ul {
         margin: 0;
         width: initial;
@@ -581,7 +579,7 @@ input:checked + .slider:before {
   .main-container {
     .intro {
       width: auto;
-      margin: 15px 0;
+      margin: 45px 0 15px 0;
       align-items: center;
       .intro-personal {
         width: 280px;
@@ -618,5 +616,14 @@ input:checked + .slider:before {
     .contact-list {
       font-size: 16px;
     }
+  }
+  .slider {
+    width: 80%;
+    height: 80%;
+  }
+  .slider:before {
+    width: 19px;
+    height: 19px;
+    bottom: 2px;
   }
 }
