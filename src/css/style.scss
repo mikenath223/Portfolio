@@ -240,11 +240,11 @@ header {
 
     .skill {
       position: relative;
-      margin: 60px 100px 0 0;
+      margin: 50px 100px 0 0;
       h1 {
         position: relative;
         z-index: 14;
-        margin-left: 20px;
+        text-align: center;
         margin-bottom: 20px;
         color: #000000;
       }
@@ -253,7 +253,7 @@ header {
         content: "";
         display: block;
         position: absolute;
-        bottom: -68px;
+        bottom: -38px;
         left: -35%;
         z-index: 9;
         border-radius: 50px;
@@ -283,9 +283,10 @@ header {
           text-align: center;
           border-radius: 8px;
           color: #fff;
-          height: 50px;
+          height: 40px;
+          width: auto;
           clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
-          background-color: rgb(23, 15, 41);
+          background-color: rgb(28, 17, 53);
         }
       }
     }
