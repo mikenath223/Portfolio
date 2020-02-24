@@ -1,5 +1,43 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
 
+
+:root {
+  --body-bg-color: rgb(255, 255, 255);
+  --body-font-color: #292922;
+  --clip-bg-color: #d6edff80;
+  --dark-font-color: #000;
+  --span-bg-color: #ef6034;
+  --ball-bg-color: rgba(7, 6, 6, 0.6);
+  --intro-h1-color: rgb(48, 44, 44);
+  --skills-bg-color: rgb(6, 21, 31);
+  --positive-skill-shadow:  #adadad;
+  --negative-skill-shadow:  #ffffff;
+  --skill-bg-color: #fff;
+  --slider-bg-light: #fcf9f9;
+  --slider-bg-tint: #ededf3;
+  --slider-border: rgba(0, 0, 0, 0.7);
+  --contact-bg-color: #262626;
+  --bg-brackets: url(../assets/brackets.png);
+}
+
+[data-theme="dark-theme"] {
+  --body-bg-color: #000;
+  --body-font-color: #fff;
+  --clip-bg-color: #1d2225;
+  --bg-brackets: url(../assets/brackets-dark.png);
+  --dark-font-color: #e1e1ff;
+  --ball-bg-color: #000;
+  --intro-h1-color: #fff;
+  --skill-bg-color: #222222;
+  --skills-bg-color: #161616;
+  --contact-bg-color: #141414;
+  --positive-skill-shadow:  #141313;
+  --negative-skill-shadow:  #272626;
+  --slider-bg-light: #000;
+  --slider-bg-tint: #000;
+  --slider-border: rgb(255, 255, 255);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -7,7 +45,7 @@ html {
 body {
   font-family: "Ubuntu", Verdana, sans-serif;
   font-size: 20px;
-  color: #3b455f;
+  color: var(--body-font-color);
   letter-spacing: 1px;
   line-height: 1;
   word-spacing: 1px;
@@ -15,7 +53,7 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   position: relative;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--body-bg-color);
   &::-webkit-scrollbar {
     width: 15px;
   }
@@ -33,7 +71,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #d6edff80;
+  background-color: var(--clip-bg-color);
   clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 93%);
 }
 
@@ -41,7 +79,7 @@ header {
   margin-top: 20px;
   height: 40px;
   nav {
-    color: #000;
+    color: var(--dark-font-color);
     font-weight: 500;
     height: 100%;
     margin-right: 50px;
@@ -55,7 +93,7 @@ header {
         display: block;
         height: 2px;
         margin-bottom: 3px;
-        background: #ef6034;
+        background: var(--span-bg-color);
       }
       .span1 {
         width: 50px;
@@ -87,7 +125,7 @@ header {
   left: 10px;
   border: 3px solid #afe0ff;
   border-radius: 50%;
-  background-color: rgba(7, 6, 6, 0.692);
+  background-color: var(--ball-bg-color);
   overflow: hidden;
   font-size: 25px;
   opacity: 0.1;
@@ -107,25 +145,81 @@ header {
   left: 10px;
   opacity: 0.3;
   font-size: 25px;
-  background-color: rgba(7, 6, 6, 0.692);
+  background-color: var(--ball-bg-color);
   border-radius: 9px;
   z-index: 99;
   transition: all 0.2s ease-in-out;
   animation: expand 0.5s forwards ease-out;
-  &:hover {
-    opacity: 1;
-    animation: wobble 1.5s alternate infinite ease-in;
-  }
 }
 
-@keyframes wobble {
-  from {
-    transform: scale(0.9);
-  }
+.toggle {
+  width: 100%;
+  margin-top: 15px;
+}
 
-  to {
-    transform: scale(1.1);
-  }
+.theme-switch-wrapper {
+  display: block;
+  float: right;
+  align-items: center;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  border-radius: 50px;
+  background: linear-gradient(5deg, var(--slider-bg-light), var(--slider-bg-tint));
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+  border: 2px solid var(--slider-border);
+}
+
+.slider:before {
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #2196f3;
+  bottom: 4px;
+  content: "";
+  height: 22px;
+  left: 4px;
+  z-index: 10;
+  position: absolute;
+  transition: 0.4s;
+  width: 22px;
+}
+
+input:checked + .slider {
+  background-color: #000;
+  border-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  background-color: #afe0ff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 @keyframes expand {
@@ -186,7 +280,7 @@ header {
   }
 
   time {
-    color: rgba(10, 16, 54, 0.8);
+    color: var(--dark-font-color);
     font-size: 18px;
   }
   margin-bottom: 80px;
@@ -207,11 +301,13 @@ header {
         background-color: red;
         padding: 3px;
         color: #fff;
+        display: inline-block;
+        margin-bottom: 5px;
       }
       h1 {
         display: block;
-        transition: all 1.5s ease-in-out;
-        color: rgb(48, 44, 44);
+        transition: all 1.5s linear;
+        color: var(--intro-h1-color);
         margin-bottom: 12px;
       }
       * {
@@ -221,7 +317,7 @@ header {
     h2 {
       font-weight: 400;
       margin: 5px 0;
-      color: #000;
+      color: var(--dark-font-color);
     }
 
     h3 {
@@ -246,7 +342,7 @@ header {
         z-index: 14;
         text-align: center;
         margin-bottom: 20px;
-        color: #000000;
+        color: var(--dark-font-color);
       }
 
       &::before {
@@ -257,9 +353,9 @@ header {
         left: -35%;
         z-index: 9;
         border-radius: 50px;
-        background: url(../assets/brackets.png) center / contain no-repeat
-          #ffffff;
-        box-shadow: inset 5px 5px 12px #adadad, inset -5px -5px 12px #ffffff;
+        background: var(--bg-brackets) center / contain no-repeat
+          var(--skill-bg-color);
+        box-shadow: inset 7px 7px 14px var(--positive-skill-shadow), inset -7px -7px 14px var(--negative-skill-shadow);
         width: 320px;
         height: 295px;
         transform-origin: 50% 48%;
@@ -285,8 +381,16 @@ header {
           color: #fff;
           height: 40px;
           width: auto;
-          clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
-          background-color: rgb(28, 17, 53);
+          clip-path: polygon(
+            0% 0%,
+            100% 0%,
+            100% 75%,
+            75% 75%,
+            75% 100%,
+            50% 75%,
+            0% 75%
+          );
+          background-color: var(--skills-bg-color);
         }
       }
     }
@@ -349,7 +453,7 @@ header {
 }
 
 .contact {
-  background-color: #262626;
+  background-color: var(--contact-bg-color);
   color: #fff;
   height: 350px;
   padding: 60px 0;
@@ -423,9 +527,6 @@ header {
       .skill {
         margin: 30px 10% 10px 50px;
         width: 200px;
-        h1 {
-          margin-left: 50px;
-        }
         .skill-tab {
           width: 200px;
           height: 150px;
