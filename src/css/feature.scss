@@ -146,14 +146,13 @@ $feature-proj-bg: #f6f8fc;
   display: none;
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1024px) {
   .featured-project {
-    margin-top: 50px;
+    margin-top: 150px;
     .feature-wrap {
       grid-template: repeat(6, 1fr) / 1fr;
       .feature-proj {
         figcaption {
-          width: 40%;
           margin-right: 0;
         }
       }
@@ -166,10 +165,6 @@ $feature-proj-bg: #f6f8fc;
     font-size: 14px;
     .feature-wrap {
       .feature-proj {
-        .img-wrap {
-          .proj-img {
-          }
-        }
         figcaption {
           width: 60%;
           margin-top: 0;
@@ -236,12 +231,12 @@ $feature-proj-bg: #f6f8fc;
           }
           .not-anime {
             animation: none;
-          }  
+          }
         }
         .lang-mobil {
           display: flex;
           justify-content: space-evenly;
-          margin-left: 10px;          
+          margin-left: 10px;
         }
         p.proj-desc-mobile {
           height: 0px;

@@ -100,13 +100,12 @@
 .mobile {
   display: none; }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1024px) {
   .featured-project {
-    margin-top: 50px; }
+    margin-top: 150px; }
     .featured-project .feature-wrap {
       grid-template: repeat(6, 1fr)/1fr; }
       .featured-project .feature-wrap .feature-proj figcaption {
-        width: 40%;
         margin-right: 0; } }
 @media only screen and (max-width: 800px) {
   .featured-project {
