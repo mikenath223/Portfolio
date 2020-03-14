@@ -10,13 +10,14 @@
   --feature-proj-bg: #131419;
   --white: #000;
   --proj-desc-col: #fff;
-  --soft-highlight: rgba(255,255,255, 0.05);
-  --dark-highlight: rgba(0,0,0, 0.51);
+  --soft-highlight: rgba(255, 255, 255, 0.05);
+  --dark-highlight: rgba(0, 0, 0, 0.51);
 }
 
 @mixin neumorphic {
   border-radius: 20px;
-  box-shadow: inset 9px 9px 18px var(--dark-highlight), inset -9px -9px 18px var(--soft-highlight);
+  box-shadow: inset 9px 9px 18px var(--dark-highlight),
+    inset -9px -9px 18px var(--soft-highlight);
   border: 5px solid rgba(255, 255, 255, 0.7);
 }
 
@@ -123,7 +124,8 @@
             }
             &:nth-child(2) {
               background: var(--white);
-              box-shadow: inset 3px 3px 5px var(--dark-highlight), inset -3px -3px 5px var(--soft-hghlight);
+              box-shadow: inset 3px 3px 5px var(--dark-highlight),
+                inset -3px -3px 5px var(--soft-hghlight);
             }
           }
         }
@@ -328,5 +330,15 @@
         }
       }
     }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --feature-proj-bg: #131419;
+    --white: #000;
+    --proj-desc-col: #fff;
+    --soft-highlight: rgba(255, 255, 255, 0.05);
+    --dark-highlight: rgba(0, 0, 0, 0.51);
   }
 }

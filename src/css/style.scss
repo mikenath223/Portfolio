@@ -630,3 +630,23 @@ input:checked + .slider:before {
     transform: translateX(17px);
   }  
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+      --body-bg-color: #000;
+      --body-font-color: #fff;
+      --clip-bg-color: #1d2225;
+      --bg-brackets: url(../assets/brackets-dark.png);
+      --dark-font-color: #e1e1ff;
+      --ball-bg-color: #000;
+      --intro-h1-color: #fff;
+      --skill-bg-color: #222222;
+      --skills-bg-color: #161616;
+      --contact-bg-color: #141414;
+      --positive-skill-shadow:  #141313;
+      --negative-skill-shadow:  #272626;
+      --slider-bg-light: #000;
+      --slider-bg-tint: #000;
+      --slider-border: rgb(255, 255, 255);    
+    }
+}
