@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
 
-
 :root {
   --body-bg-color: rgb(255, 255, 255);
   --body-font-color: #292922;
@@ -10,8 +9,8 @@
   --ball-bg-color: rgba(7, 6, 6, 0.6);
   --intro-h1-color: rgb(48, 44, 44);
   --skills-bg-color: rgb(6, 21, 31);
-  --positive-skill-shadow:  #adadad;
-  --negative-skill-shadow:  #ffffff;
+  --positive-skill-shadow: #adadad;
+  --negative-skill-shadow: #ffffff;
   --skill-bg-color: #fff;
   --slider-bg-light: #fcf9f9;
   --slider-bg-tint: #ededf3;
@@ -31,8 +30,8 @@
   --skill-bg-color: #222222;
   --skills-bg-color: #161616;
   --contact-bg-color: #141414;
-  --positive-skill-shadow:  #141313;
-  --negative-skill-shadow:  #272626;
+  --positive-skill-shadow: #141313;
+  --negative-skill-shadow: #272626;
   --slider-bg-light: #000;
   --slider-bg-tint: #000;
   --slider-border: rgb(255, 255, 255);
@@ -82,7 +81,7 @@ header {
     color: var(--dark-font-color);
     font-weight: 500;
     height: 100%;
-    margin-right: 50px;
+    margin-right: 80px;
     margin-left: auto;
     width: 190px;
     z-index: 10;
@@ -129,7 +128,7 @@ header {
   overflow: hidden;
   font-size: 25px;
   opacity: 0.1;
-  padding: 0 0 2.5px 5px;
+  padding: 2.5px 4px;
   color: #fff;
   animation: rollIn 3s forwards linear;
 }
@@ -145,6 +144,7 @@ header {
   left: 10px;
   opacity: 0.3;
   font-size: 25px;
+  padding-left: 9px;
   background-color: var(--ball-bg-color);
   border-radius: 9px;
   z-index: 99;
@@ -155,6 +155,7 @@ header {
 .toggle {
   width: 100%;
   margin-top: 15px;
+  margin-left: 8px;
 }
 
 .theme-switch-wrapper {
@@ -176,7 +177,11 @@ header {
 
 .slider {
   border-radius: 50px;
-  background: linear-gradient(5deg, var(--slider-bg-light), var(--slider-bg-tint));
+  background: linear-gradient(
+    5deg,
+    var(--slider-bg-light),
+    var(--slider-bg-tint)
+  );
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -259,15 +264,17 @@ input:checked + .slider:before {
 
 .articles {
   padding-left: 5%;
-
   .article-one {
     display: block;
     text-decoration: none;
     color: inherit;
-    * {
-      margin-bottom: 20px;
+    &:first-child {
+      margin-bottom: 50px;
     }
-    width: 60%;
+    * {
+      margin-bottom: 25px;
+    }
+    width: 70%;
     margin: auto;
     .article-img {
       width: 100%;
@@ -352,9 +359,10 @@ input:checked + .slider:before {
         border-radius: 50px;
         background: var(--bg-brackets) center / contain no-repeat
           var(--skill-bg-color);
-        box-shadow: inset 7px 7px 14px var(--positive-skill-shadow), inset -7px -7px 14px var(--negative-skill-shadow);
-        width: 320px;
-        height: 295px;
+        box-shadow: inset 7px 7px 14px var(--positive-skill-shadow),
+          inset -7px -7px 14px var(--negative-skill-shadow);
+        width: 350px;
+        height: 330px;
         transform-origin: 50% 48%;
         border-radius: 43%;
         animation: drift 7s infinite linear;
@@ -522,7 +530,7 @@ input:checked + .slider:before {
         width: 100%;
       }
       .skill {
-        margin: 30px 10% 10px 50px;
+        margin: 30px 10% 30px 50px;
         width: 200px;
         .skill-tab {
           width: 200px;
@@ -530,14 +538,14 @@ input:checked + .slider:before {
           .skill-tab1 p,
           .skill-tab2 p {
             height: 35px;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
           }
         }
         &::before {
-          width: 280px;
-          height: 265px;
-          left: -39px;
-          bottom: -40px;
+          width: 320px;
+          height: 300px;
+          left: -49px;
+          bottom: -80px;
         }
       }
     }
@@ -572,6 +580,7 @@ input:checked + .slider:before {
       ul {
         margin: 0;
         width: initial;
+        padding: 0;
       }
     }
   }
@@ -601,10 +610,10 @@ input:checked + .slider:before {
           }
         }
         &::before {
-          width: 210px;
-          height: 210px;
+          width: 230px;
+          height: 230px;
           left: -5px;
-          bottom: 0px;
+          bottom: -25px;
         }
       }
     }
@@ -628,25 +637,38 @@ input:checked + .slider:before {
   }
   input:checked + .slider:before {
     transform: translateX(17px);
-  }  
+  }
+  .toggle {
+    margin-left: 15px;
+  }
+  .list-articles {
+    .article-one {
+      * {
+        margin-bottom: 10px;
+      }
+      &:first-child {
+        margin-bottom: 25px;
+      }
+    }
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-      --body-bg-color: #000;
-      --body-font-color: #fff;
-      --clip-bg-color: #1d2225;
-      --bg-brackets: url(../assets/brackets-dark.png);
-      --dark-font-color: #e1e1ff;
-      --ball-bg-color: #000;
-      --intro-h1-color: #fff;
-      --skill-bg-color: #222222;
-      --skills-bg-color: #161616;
-      --contact-bg-color: #141414;
-      --positive-skill-shadow:  #141313;
-      --negative-skill-shadow:  #272626;
-      --slider-bg-light: #000;
-      --slider-bg-tint: #000;
-      --slider-border: rgb(255, 255, 255);    
-    }
+  :root {
+    --body-bg-color: #000;
+    --body-font-color: #fff;
+    --clip-bg-color: #1d2225;
+    --bg-brackets: url(../assets/brackets-dark.png);
+    --dark-font-color: #e1e1ff;
+    --ball-bg-color: #000;
+    --intro-h1-color: #fff;
+    --skill-bg-color: #222222;
+    --skills-bg-color: #161616;
+    --contact-bg-color: #141414;
+    --positive-skill-shadow: #141313;
+    --negative-skill-shadow: #272626;
+    --slider-bg-light: #000;
+    --slider-bg-tint: #000;
+    --slider-border: rgb(255, 255, 255);
+  }
 }

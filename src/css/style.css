@@ -73,7 +73,7 @@ header {
     color: var(--dark-font-color);
     font-weight: 500;
     height: 100%;
-    margin-right: 50px;
+    margin-right: 80px;
     margin-left: auto;
     width: 190px;
     z-index: 10;
@@ -112,7 +112,7 @@ header {
   overflow: hidden;
   font-size: 25px;
   opacity: 0.1;
-  padding: 0 0 2.5px 5px;
+  padding: 2.5px 4px;
   color: #fff;
   animation: rollIn 3s forwards linear; }
 
@@ -127,6 +127,7 @@ header {
   left: 10px;
   opacity: 0.3;
   font-size: 25px;
+  padding-left: 9px;
   background-color: var(--ball-bg-color);
   border-radius: 9px;
   z-index: 99;
@@ -135,7 +136,8 @@ header {
 
 .toggle {
   width: 100%;
-  margin-top: 15px; }
+  margin-top: 15px;
+  margin-left: 8px; }
 
 .theme-switch-wrapper {
   display: block;
@@ -218,10 +220,12 @@ input:checked + .slider:before {
     display: block;
     text-decoration: none;
     color: inherit;
-    width: 60%;
+    width: 70%;
     margin: auto; }
+    .articles .article-one:first-child {
+      margin-bottom: 50px; }
     .articles .article-one * {
-      margin-bottom: 20px; }
+      margin-bottom: 25px; }
     .articles .article-one .article-img {
       width: 100%;
       max-width: 500px;
@@ -284,8 +288,8 @@ input:checked + .slider:before {
       border-radius: 50px;
       background: var(--bg-brackets) center/contain no-repeat var(--skill-bg-color);
       box-shadow: inset 7px 7px 14px var(--positive-skill-shadow), inset -7px -7px 14px var(--negative-skill-shadow);
-      width: 320px;
-      height: 295px;
+      width: 350px;
+      height: 330px;
       transform-origin: 50% 48%;
       border-radius: 43%;
       animation: drift 7s infinite linear; }
@@ -398,7 +402,7 @@ input:checked + .slider:before {
     .main-container .intro .intro-personal {
       width: 100%; }
     .main-container .intro .skill {
-      margin: 30px 10% 10px 50px;
+      margin: 30px 10% 30px 50px;
       width: 200px; }
       .main-container .intro .skill .skill-tab {
         width: 200px;
@@ -406,12 +410,12 @@ input:checked + .slider:before {
         .main-container .intro .skill .skill-tab .skill-tab1 p,
         .main-container .intro .skill .skill-tab .skill-tab2 p {
           height: 35px;
-          margin-bottom: 25px; }
+          margin-bottom: 15px; }
       .main-container .intro .skill::before {
-        width: 280px;
-        height: 265px;
-        left: -39px;
-        bottom: -40px; }
+        width: 320px;
+        height: 300px;
+        left: -49px;
+        bottom: -80px; }
 
   .ball {
     z-index: 5;
@@ -435,7 +439,8 @@ input:checked + .slider:before {
     margin-right: 20px; }
     header nav ul {
       margin: 0;
-      width: initial; }
+      width: initial;
+      padding: 0; }
 
   .main-container .intro {
     width: auto;
@@ -457,10 +462,10 @@ input:checked + .slider:before {
           height: 30px;
           margin: 5px; }
       .main-container .intro .skill::before {
-        width: 210px;
-        height: 210px;
+        width: 230px;
+        height: 230px;
         left: -5px;
-        bottom: 0px; }
+        bottom: -25px; }
 
   .expand {
     font-size: 20px; }
@@ -478,7 +483,15 @@ input:checked + .slider:before {
     bottom: 2px; }
 
   input:checked + .slider:before {
-    transform: translateX(17px); } }
+    transform: translateX(17px); }
+
+  .toggle {
+    margin-left: 15px; }
+
+  .list-articles .article-one * {
+    margin-bottom: 10px; }
+  .list-articles .article-one:first-child {
+    margin-bottom: 25px; } }
 @media (prefers-color-scheme: dark) {
   :root {
     --body-bg-color: #000;
