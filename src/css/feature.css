@@ -74,7 +74,7 @@
         .featured-project .feature-wrap .feature-proj figcaption .lang-stacks span {
           font-size: 15px;
           border: 2px solid skyblue;
-          padding: 3px;
+          padding: 1px;
           margin-right: 10px; }
         .featured-project .feature-wrap .feature-proj figcaption .source-wrap {
           display: flex;

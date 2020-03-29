@@ -353,7 +353,7 @@ input:checked + .slider:before {
         content: "";
         display: block;
         position: absolute;
-        bottom: -38px;
+        bottom: -28px;
         left: -35%;
         z-index: 9;
         border-radius: 50px;
@@ -361,9 +361,8 @@ input:checked + .slider:before {
           var(--skill-bg-color);
         box-shadow: inset 7px 7px 14px var(--positive-skill-shadow),
           inset -7px -7px 14px var(--negative-skill-shadow);
-        width: 350px;
-        height: 330px;
-        transform-origin: 50% 48%;
+        width: 360px;
+        height: 340px;
         border-radius: 43%;
         animation: drift 7s infinite linear;
       }
