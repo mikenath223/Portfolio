@@ -44,6 +44,7 @@ body {
   letter-spacing: 0.8px;
   line-height: 1;
   word-spacing: 1px;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   position: relative;
@@ -117,7 +118,6 @@ header {
   overflow: hidden;
   font-size: 25px;
   opacity: 0.1;
-  padding: 2.5px 4px;
   color: #fff;
   -webkit-animation: rollIn 3s forwards linear;
           animation: rollIn 3s forwards linear; }
@@ -126,26 +126,32 @@ header {
   position: fixed;
   top: 20px;
   width: auto;
-  border: 3px solid #afe0ff;
   padding: 3px 5px 2px 5px;
   color: #fff;
-  height: 35px;
   left: 10px;
   opacity: 0.3;
-  font-size: 25px;
-  padding-left: 9px;
-  background-color: var(--ball-bg-color);
-  border-radius: 9px;
   z-index: 99;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   -webkit-animation: expand 0.5s forwards ease-out;
           animation: expand 0.5s forwards ease-out; }
 
+.ball p {
+  text-align: center;
+}
+
+.soc-ball {
+  border: 3px solid #afe0ff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .toggle {
-  width: 100%;
-  margin-top: 15px;
-  margin-left: 8px; }
+  width: 100%;}
 
 .theme-switch-wrapper {
   display: block;
@@ -472,10 +478,33 @@ input:checked + .slider:before {
       width: 40%; }
     .main-container .intro .skill {
       margin: 0;
+      font-size: 15px;
       bottom: -50px; }
+      h1 {
+        font-size: 1.7em;
+      }
       .main-container .intro .skill::before {
-        bottom: -30px;
-        right: -18px; } }
+        bottom: -20px;
+        width: 300px;
+        height: 300px;
+        left: -55px; } }
+@media only screen and (max-width: 900px) {
+  .main-container .intro .skill {
+    font-size: 13px;
+  }
+  h1 {
+    font-size: 1.6em;
+  }
+  .main-container .intro .skill::before {
+    bottom: 50px;
+    width: 250px;
+    height: 250px;
+  }
+  .main-container .intro .skill .skill-tab p {
+    margin-bottom: 5px;
+    padding: 3px;
+  }
+}
 @media only screen and (max-width: 800px) {
   body {
     font-size: 16px; }
@@ -498,6 +527,9 @@ input:checked + .slider:before {
     .main-container .intro .skill {
       margin: 30px 10% 30px 50px;
       width: 200px; }
+  .main-container .intro .intro-personal {
+        margin-top: 50px;
+      }
       .main-container .intro .skill .skill-tab {
         width: 200px;
         height: 150px; }
@@ -584,9 +616,6 @@ input:checked + .slider:before {
   input:checked + .slider:before {
     -webkit-transform: translateX(17px);
             transform: translateX(17px); }
-
-  .toggle {
-    margin-left: 15px; }
 
   .list-articles .article-one * {
     margin-bottom: 10px; }
