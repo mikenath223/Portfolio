@@ -39,13 +39,14 @@
       -webkit-box-pack: justify;
               justify-content: space-between;
       position: relative;
-      height: 400px;
+      height: 450px;
       background-color: var(--feature-proj-bg);
       background-size: cover;
       background-repeat: no-repeat; }
       .featured-project .feature-wrap .feature-proj:hover .proj-img {
         -webkit-animation: scale 1.5s forwards linear;
-                animation: scale 1.5s forwards linear; }
+                animation: scale 1.5s forwards linear;
+        bottom: 0px;}
       .featured-project .feature-wrap .feature-proj .img-wrap {
         height: 100%;
         position: relative;
@@ -57,12 +58,11 @@
           position: absolute;
           left: 0;
           max-height: 340px;
-          bottom: 0;
+          bottom: 30px;
           width: auto; }
       .featured-project .feature-wrap .feature-proj figcaption {
         display: -webkit-box;
         display: flex;
-        margin-top: 40px;
         margin-right: 15px;
         -webkit-box-pack: space-evenly;
                 justify-content: space-evenly;
@@ -76,7 +76,7 @@
           font-family: Helvetica, sans-serif;
           font-size: 17px;
           font-weight: 500;
-          line-height: 1.5;
+          line-height: 1.1;
           word-spacing: 1.5px;
           color: var(--proj-desc-col); }
         .featured-project .feature-wrap .feature-proj figcaption .icon-proj {
@@ -84,14 +84,17 @@
         .featured-project .feature-wrap .feature-proj figcaption .lang-stacks {
           overflow-wrap: break-word;
           line-height: 2.0;
-
+          margin-bottom: 0;
+        }
+        .featured-project .feature-wrap .feature-proj figcaption h3 {
+          text-transform: uppercase;
         }
         .featured-project .feature-wrap .feature-proj figcaption .lang-stacks span {
           font-size: 15px;
           border: 2px solid #007eff;
           padding: 3px;
+          white-space: nowrap;
           margin-bottom: 5px;
-          word-break: break-all;
           margin-right: 10px; }
         .featured-project .feature-wrap .feature-proj figcaption .source-wrap {
           text-align: center;
@@ -153,13 +156,42 @@
 .mobile {
   display: none; }
 
-@media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1350px) {
+    figure {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+    .featured-project .feature-wrap .feature-proj .img-wrap .proj-img {
+      max-height: 300px;      
+    }
+  }
+
+@media only screen and (max-width: 1224px) {
   .featured-project {
     margin-top: 150px; }
-    .featured-project .feature-wrap {
-      grid-template: repeat(6, 1fr)/1fr; }
       .featured-project .feature-wrap .feature-proj figcaption {
-        margin-right: 0; } }
+        margin-right: 0; }
+        .featured-project .feature-wrap .feature-proj .img-wrap .proj-img {
+          left: 10px;
+          bottom: 20px;
+        } }
+@media only screen and (max-width: 1075px) {
+  .featured-project .feature-wrap .feature-proj .img-wrap .proj-img {
+    max-height: 290px;
+    bottom: 60px;
+    left: 80px;
+  }
+  .featured-project .feature-wrap .feature-proj figcaption p.proj-desc {
+    line-height: 1;
+  }
+  .featured-project .feature-wrap .feature-proj figcaption {
+    margin-right: 10px;
+  }
+}
+@media only screen and (max-width: 1004px) {
+  .featured-project .feature-wrap {
+    grid-template: repeat(6, 1fr)/1fr; }
+        }
 @media only screen and (max-width: 800px) {
   .featured-project {
     font-size: 14px; }
@@ -177,6 +209,9 @@
         height: 500px;
         margin: 16px 0px;
                 align-items: center; }
+      .featured-project .feature-wrap .mobile-weather-height {
+        height: 600px;
+      }
         .featured-project .feature-wrap .feature-proj .img-wrap {
           margin: 0;
           width: 100%; }
@@ -209,6 +244,7 @@
           .featured-project .feature-wrap .feature-proj .info-wrap-mobile .proj-img-mobile {
             width: auto;
             max-height: 300px;
+            margin-bottom: -15px;
             -webkit-animation: img-hold 12s infinite 5s linear;
                     animation: img-hold 12s infinite 5s linear; }
           .featured-project .feature-wrap .feature-proj .info-wrap-mobile .not-anime {
@@ -310,7 +346,7 @@
     .featured-project .feature-wrap .feature-proj .info-wrap-mobile {
       width: 100%; }
       .featured-project .feature-wrap .feature-proj .info-wrap-mobile .lang-mobil {
-        margin: auto;
+        margin: 30px auto 0 auto;
         width: 98%; }
         .featured-project .feature-wrap .feature-proj .info-wrap-mobile .lang-mobil span {
           font-size: 12px; } }
