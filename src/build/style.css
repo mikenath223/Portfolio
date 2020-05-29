@@ -41,10 +41,9 @@ body {
   font-family: "Ubuntu", Verdana, sans-serif;
   font-size: 20px;
   color: var(--body-font-color);
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   line-height: 1;
   word-spacing: 1px;
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   position: relative;
