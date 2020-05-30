@@ -155,7 +155,7 @@ header {
 
 .theme-switch-wrapper {
   display: block;
-  float: right;
+  float: left;
   -webkit-box-align: center;
           align-items: center; }
 
@@ -337,7 +337,7 @@ input:checked + .slider:before {
       content: "";
       display: block;
       position: absolute;
-      bottom: -38px;
+      bottom: -20px;
       left: -35%;
       z-index: 9;
       border-radius: 50px;
@@ -449,9 +449,6 @@ input:checked + .slider:before {
           flex-direction: column; }
   .contact .greeting .greet-head {
     display: inline;
-    text-decoration: underline;
-    -webkit-text-decoration-color: #2196f3;
-            text-decoration-color: #2196f3;
     font-size: 26px; }
   .contact .greeting .fa-comment-dots {
     position: relative;
@@ -468,6 +465,11 @@ input:checked + .slider:before {
     justify-content: space-around;
     min-width: 80%;
     font-size: 28px; }
+.contact .contact-list a {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #2196f3;
+          text-decoration-color: #2196f3;
+}
 
 @media only screen and (max-width: 1024px) {
   .main-container .intro {
