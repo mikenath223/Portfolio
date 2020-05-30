@@ -15,6 +15,7 @@
   --slider-bg-tint: #ededf3;
   --slider-border: rgba(0, 0, 0, 0.7);
   --contact-bg-color: #262626;
+  --toggle-img: url('../assets/sun.png');
   --bg-brackets: url(../assets/brackets.png); }
 
 [data-theme="dark-theme"] {
@@ -32,6 +33,7 @@
   --negative-skill-shadow: #272626;
   --slider-bg-light: #000;
   --slider-bg-tint: #000;
+  --toggle-img: url('../assets/night.png');
   --slider-border: rgb(255, 255, 255); }
 
 html {
@@ -186,7 +188,7 @@ header {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
   border: 1px solid #2196f3;
   bottom: 4px;
-  content: "";
+  content: var(--toggle-img);
   height: 22px;
   left: 4px;
   z-index: 10;
