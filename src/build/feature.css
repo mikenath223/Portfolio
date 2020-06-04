@@ -134,7 +134,9 @@
         border-radius: 20px;
         box-shadow: inset 9px 9px 18px var(--dark-highlight), inset -9px -9px 18px var(--soft-highlight);
         border: 5px solid rgba(255, 255, 255, 0.7); }
-
+        .articles h1 {
+          margin-left: 20px;
+        }
 @-webkit-keyframes scale {
   from {
     -webkit-transform: scale(0.8);
