@@ -26,7 +26,7 @@ const switchTheme = (e) => {
     gitSoc.src = "./src/assets/icons8-github-white.png";
   } else {
     document.documentElement.setAttribute("data-theme", "light-theme");
-    gitSoc.src = "./src/assets/icons8-linkedin-30.png";
+    gitSoc.src = "./src/assets/icons8-github-30.png";
   }
 }
 
