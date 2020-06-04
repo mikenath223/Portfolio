@@ -663,7 +663,9 @@ input:checked + .slider:before {
             transform: translateX(17px); }
   .list-articles .article-one {
     width: 95%; 
-    padding: 10px;} }
+    padding: 10px;}
+    .articles .article-one .article-img {
+      max-width: 260px; } }
 
 @media (prefers-color-scheme: dark) {
   :root {
