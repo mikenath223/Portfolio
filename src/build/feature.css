@@ -296,8 +296,7 @@
     50%,
     70% {
       opacity: 1;
-      height: -webkit-max-content;
-      height: max-content; 
+      height: 250px; 
       padding-top: 10px;}
     80%,
     to {
