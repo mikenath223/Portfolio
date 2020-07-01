@@ -610,11 +610,15 @@ input:checked + .slider:before {
 
   header nav {
     width: 120px;
+    margin-top: 25px;
     margin-right: 20px; }
     header nav ul {
       margin: 0;
+      font-size: 16px;
       width: initial;
       padding: 0; }
+    header nav ul li:first-child {
+      margin-left: -25px; }
 
   .main-container .intro {
     width: auto;
