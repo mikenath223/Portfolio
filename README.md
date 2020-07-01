@@ -45,9 +45,9 @@ Portfolio Page
 
 # Built With
   - Passion for coding 💜
-  - `HTML5`
-  - `CSS3`
-  - `Javascript(ES6)`
+  - `HTML`
+  - `CSS`
+  - `JavaScript`
 
 
 # Author
