@@ -609,7 +609,7 @@ input:checked + .slider:before {
     font-size: 12px; }
 
   header nav {
-    width: 120px;
+    width: 150px;
     margin-top: 25px;
     margin-right: 20px; }
     header nav ul {
@@ -617,6 +617,8 @@ input:checked + .slider:before {
       font-size: 16px;
       width: initial;
       padding: 0; }
+    header nav ul li {
+      text-align: right; }
     header nav ul li:first-child {
       margin-left: -25px; }
 
@@ -670,6 +672,20 @@ input:checked + .slider:before {
     padding: 10px;}
     .articles .article-one .article-img {
       max-width: 260px; } }
+
+@media only screen and (max-width: 330px) {
+  header nav {
+    width: 130px; }
+  header nav ul {
+    font-size: 13px; }
+  .soc-ball {
+    width: 35px;
+    height: 35px; }
+  .soc-ball img {
+    height: auto;
+    max-width: 25px; }
+  
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
