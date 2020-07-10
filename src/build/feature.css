@@ -287,6 +287,11 @@
           transition: height 2s;
           -webkit-animation: p-info 12s infinite 5s linear;
                   animation: p-info 12s infinite 5s linear; }
+                  .featured-project .feature-wrap .feature-proj p.mob-event {
+                    top: 0;
+                    -webkit-animation: p-info-eventrix 12s infinite 5s linear;
+                    animation: p-info-eventrix 12s infinite 5s linear;
+                  }
 
   @-webkit-keyframes p-info {
     from {
@@ -296,7 +301,7 @@
     50%,
     70% {
       opacity: 1;
-      height: 250px; 
+      height: 260px; 
       padding-top: 10px;}
     80%,
     to {
@@ -311,12 +316,44 @@
     50%,
     70% {
       opacity: 1;
-      height: 250px;
+      height: 260px;
       padding-top: 10px; }
     80%,
     to {
       opacity: 0;
       height: 0px; } }
+
+      @-webkit-keyframes p-info-eventrix {
+        from {
+          opacity: 0;
+          height: 0px; }
+        30%,
+        50%,
+        70% {
+          opacity: 1;
+          height: 300px; 
+          padding-top: 0px;}
+        80%,
+        to {
+          opacity: 0;
+          height: 0px; } }
+    
+      @keyframes p-info-eventrix {
+        from {
+          opacity: 0;
+          height: 0px; }
+        30%,
+        50%,
+        70% {
+          opacity: 1;
+          height: 300px;
+          padding-top: 0px; }
+        80%,
+        to {
+          opacity: 0;
+          height: 0px; } }
+    
+
   @-webkit-keyframes img-hold {
     from {
       opacity: 1;
