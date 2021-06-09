@@ -11,9 +11,7 @@ document.querySelector(".ball").addEventListener(
     <img
     src="./src/assets/icons8-twitter-30.png" alt="github"> </a>`;
     e.target.classList.replace("ball", "expand");
-  },
-  false
-);
+  });
 
 const toggleSwitch = document.querySelector(
   'input[type="checkbox"]'
@@ -30,4 +28,4 @@ const switchTheme = (e) => {
   }
 }
 
-toggleSwitch.addEventListener("change", switchTheme, false);
+toggleSwitch.addEventListener("change", switchTheme);
