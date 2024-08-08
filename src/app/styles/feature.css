@@ -15,9 +15,6 @@
 }
 
 .featured-project {
-  margin: 150px 0 5% 0;
-  padding: 0 10px;
-  overflow-x: hidden;
   background-color: var(--feature-proj-bg);
 }
 .featured-project .project-intro {
@@ -32,12 +29,9 @@
   animation: slide ease-in-out infinite 2s;
 }
 .featured-project .feature-wrap {
-  display: grid;
-  grid-template: repeat(3, 1fr) / repeat(2, minmax(350px, 1fr));
   -webkit-box-pack: center;
   justify-content: center;
   background-clip: padding-box;
-  max-width: 1440px;
   margin-inline: auto;
 }
 .featured-project .feature-wrap .feature-proj {
@@ -50,7 +44,6 @@
   -webkit-box-pack: justify;
   justify-content: space-between;
   position: relative;
-  height: 520px;
   background-color: var(--feature-proj-bg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -58,27 +51,10 @@
 .featured-project .feature-wrap .feature-proj:hover .proj-img {
   -webkit-animation: scale 1.5s forwards linear;
   animation: scale 1.5s forwards linear;
-  bottom: 0px;
-}
-.featured-project .feature-wrap .feature-proj .img-wrap {
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  width: 35%;
-  left: 15px;
-  bottom: 5px;
-}
-.featured-project .feature-wrap .feature-proj .img-wrap .proj-img {
-  position: absolute;
-  left: 0;
-  max-height: 340px;
-  bottom: 30px;
-  width: auto;
 }
 .featured-project .feature-wrap .feature-proj figcaption {
   display: -webkit-box;
   display: flex;
-  margin-right: 15px;
   -webkit-box-pack: space-evenly;
   justify-content: space-evenly;
   -webkit-box-align: space-around;
@@ -87,9 +63,6 @@
   -webkit-box-direction: normal;
   flex-direction: column;
   width: 62%;
-}
-.featured-project .feature-wrap .feature-proj .main-project {
-  padding-block: 3rem;
 }
 .featured-project .feature-wrap .feature-proj figcaption p.proj-desc {
   font-family: Helvetica, sans-serif;
@@ -114,11 +87,9 @@
 }
 .featured-project .feature-wrap .feature-proj figcaption .lang-stacks span {
   font-size: 15px;
-  border: 2px solid #007eff;
   padding: 3px;
   white-space: nowrap;
   margin-bottom: 5px;
-  margin-right: 10px;
 }
 .featured-project .feature-wrap .feature-proj figcaption .source-wrap {
   text-align: center;
@@ -135,24 +106,9 @@
   background-color: var(--feature-proj-bg);
   font-weight: 600;
 }
-.featured-project
-  .feature-wrap
-  .feature-proj
-  figcaption
-  .source-wrap
-  a:first-child {
+.featured-project .feature-wrap .feature-proj figcaption .source-wrap a {
   box-shadow: 6px 6px 16px 0 var(--dark-highlight),
     -6px -6px 16px 0 var(--soft-highlight);
-}
-.featured-project
-  .feature-wrap
-  .feature-proj
-  figcaption
-  .source-wrap
-  a:nth-child(2) {
-  background: var(--white);
-  box-shadow: inset 3px 3px 5px var(--dark-highlight),
-    inset -3px -3px 5px var(--soft-hghlight);
 }
 .featured-project
   .feature-wrap
@@ -242,9 +198,6 @@
     margin-right: 10px;
     margin-left: 10px;
   }
-  .featured-project .feature-wrap .feature-proj .img-wrap .proj-img {
-    max-height: 300px;
-  }
 }
 
 @media only screen and (max-width: 1224px) {
@@ -254,29 +207,13 @@
   .featured-project .feature-wrap .feature-proj figcaption {
     margin-right: 0;
   }
-  .featured-project .feature-wrap .feature-proj .img-wrap .proj-img {
-    left: 0;
-    bottom: 60px;
-  }
 }
 @media only screen and (max-width: 1075px) {
-  .featured-project .feature-wrap .feature-proj .img-wrap .proj-img {
-    max-height: 290px;
-    bottom: 60px;
-    left: 0;
-  }
   .featured-project .feature-wrap .feature-proj figcaption p.proj-desc {
     line-height: 1;
   }
   .featured-project .feature-wrap .feature-proj figcaption {
     margin-right: 10px;
-  }
-}
-@media only screen and (max-width: 1004px) {
-  .featured-project .feature-wrap {
-    grid-template: repeat(6, 1fr) / 1fr;
-    max-width: 600px;
-    margin-inline: auto;
   }
 }
 @media only screen and (max-width: 800px) {
@@ -293,31 +230,12 @@
     font-size: 12px;
     padding: 0 10px;
   }
-  .featured-project .feature-wrap {
-    padding: 0;
-    width: 100%;
-  }
   .featured-project .feature-wrap .feature-proj {
-    height: 500px;
     margin: 16px 0px;
     align-items: center;
   }
-  .featured-project .feature-wrap .mobile-weather-height,
-  .featured-project .feature-wrap .trixx-feature {
-    height: 600px;
-  }
-  .featured-project .feature-wrap .feature-proj .img-wrap {
-    margin: 0;
-    width: 100%;
-  }
-  .featured-project .feature-wrap .feature-proj .img-wrap .proj-img {
-    left: 25%;
-    bottom: 0;
-    height: 150px;
-  }
   .featured-project .feature-wrap .feature-proj figcaption {
     width: 100%;
-    height: 90%;
     margin-bottom: 10px;
   }
   .featured-project .feature-wrap .feature-proj .main-project {
@@ -330,9 +248,6 @@
   .featured-project .feature-wrap .feature-proj figcaption .source-wrap {
     font-size: 11px;
   }
-  .featured-project .feature-wrap .feature-proj .proj-large {
-    display: none;
-  }
   .featured-project .feature-wrap .feature-proj .mobile {
     display: initial;
   }
@@ -341,22 +256,10 @@
     width: 100%;
   }
   .featured-project .feature-wrap .feature-proj .info-wrap-mobile .img-center {
-    width: 80%;
     margin: auto;
     text-align: center;
     position: relative;
     opacity: 1;
-  }
-  .featured-project
-    .feature-wrap
-    .feature-proj
-    .info-wrap-mobile
-    .proj-img-mobile {
-    width: auto;
-    max-height: 300px;
-    margin-bottom: -15px;
-    -webkit-animation: img-hold 12s infinite 5s linear;
-    animation: img-hold 12s infinite 5s linear;
   }
   .featured-project .feature-wrap .feature-proj .info-wrap-mobile .not-anime {
     -webkit-animation: none;
@@ -366,20 +269,6 @@
     text-align: center;
     word-wrap: unset;
     margin: 20px;
-  }
-  .featured-project .feature-wrap .feature-proj p.proj-desc-mobile {
-    height: 0px;
-    overflow: hidden;
-    position: absolute;
-    top: 20px;
-    font-size: 18px;
-    left: 0;
-    z-index: 55;
-    background-color: var(--feature-proj-bg);
-    -webkit-transition: height 2s;
-    transition: height 2s;
-    -webkit-animation: p-info 12s infinite 5s linear;
-    animation: p-info 12s infinite 5s linear;
   }
   .featured-project .feature-wrap .feature-proj p.mob-event {
     top: 0;
@@ -515,9 +404,6 @@
   }
 }
 @media only screen and (max-width: 400px) {
-  .featured-project {
-    margin-top: 80px;
-  }
   .featured-project .feature-wrap .feature-proj .info-wrap-mobile {
     width: 100%;
   }
