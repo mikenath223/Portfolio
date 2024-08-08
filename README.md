@@ -52,6 +52,6 @@ To learn more about the technologies used in this project:
 
 ## Contact
 
-[Your Name] - [your.email@example.com]
+[Michgolden Ukeje] - [ukejemichgolden@yahoo.com]
 
-Project Link: [https://github.com/yourusername/my-portfolio-project](https://github.com/yourusername/my-portfolio-project)
+Project Link: [https://github.com/mikenath223/Portfolio](https://github.com/mikenath223/Portfolio)
