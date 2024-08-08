@@ -30,8 +30,6 @@ const FeaturedProjects = () => {
     };
   }, []);
 
-  console.log({ isDarkMode });
-
   const projects = [
     {
       title: "Bettercast Event Hosting",
