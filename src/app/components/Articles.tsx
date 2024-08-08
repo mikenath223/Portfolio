@@ -40,9 +40,8 @@ const Articles = () => {
               <Image
                 src={article.image}
                 alt={article.title}
-                layout="fill"
-                objectFit="cover"
-                className="transform group-hover:scale-105 transition-transform duration-300"
+                fill
+                className="transform group-hover:scale-105 transition-transform duration-300 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             </div>
