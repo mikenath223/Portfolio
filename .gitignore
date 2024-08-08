@@ -1,2 +1,6 @@
 src/css/.sass-cache
 src/css/*.map
+
+node_modules
+
+.next
