@@ -114,6 +114,22 @@ header nav .line .span3 {
   -webkit-animation: line 2s linear;
   animation: line 2s linear;
 }
+
+header nav .line:hover .span1,
+header nav .line:hover .span2,
+header nav .line:hover .span3 {
+  transition: width 0.3s ease-in-out;
+}
+
+header nav .line:hover .span1,
+header nav .line:hover .span3 {
+  width: 60px;
+}
+
+header nav .line:hover .span2 {
+  width: 50px;
+}
+
 header nav ul {
   display: -webkit-box;
   display: flex;
