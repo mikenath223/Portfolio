@@ -26,7 +26,7 @@ const headerSocials = `
   <a href="https://www.linkedin.com/in/michgoldenukeje/" class="soc-ball" rel="noopener" target="_blank">
     <img src="/images/icons8-linkedin-30.png" alt="linkedin">
   </a>
-  <a href="https://twitter.com/MichgoldenU" class="soc-ball" rel="noopener" target="_blank">
+  <a href="https://x.com/thedevmich" class="soc-ball" rel="noopener" target="_blank">
     <img src="/images/icons8-twitter-30.png" alt="twitter">
   </a>
 `;

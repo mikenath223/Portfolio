@@ -122,7 +122,7 @@ export const contactLinks = [
   { name: "GitLab", link: "https://gitlab.com/mikenath223", icon: FaGitlab },
   {
     name: "Twitter",
-    link: "https://twitter.com/thedevmich",
+    link: "https://x.com/thedevmich",
     icon: FaTwitter,
   },
   {
