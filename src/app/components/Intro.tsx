@@ -2,16 +2,14 @@ const Intro = () => {
   return (
     <section className="intro items-center sm">
       <div className="intro-personal">
-        <h3>I am</h3>
-        <h1>Michgolden Ukeje</h1>
-        <h2>
-          a <span className="taught">self-taught</span> Full Stack Web Developer
+        <h3 className="!my-0">I am</h3>
+        <h1 className="!my-0">Michgolden Ukeje</h1>
+        <h2 className="!my-0">
+          a self-taught <span className="taught">Full Stack Web Developer</span>
         </h2>
-        <h3>
-          filled with an <span className="passion">undying passion</span> for
-          creating <br />
-          UI-UX integrated web solutions.
-        </h3>
+        filled with an <span className="passion">undying passion</span> for
+        creating <br />
+        UI-UX integrated web solutions.
       </div>
       <div
         className={`skill before:-bottom-[75px] md:mt-0 mt-10 before:-left-[55px] 

@@ -1,4 +1,4 @@
-import { contactLinks } from "../../constants/projects.constants";
+import { contactLinks } from "@src/constants/contacts.constants";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
