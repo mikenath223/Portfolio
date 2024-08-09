@@ -1,4 +1,6 @@
-export const projects = [
+import { Project } from "@src/interfaces/project.interface";
+
+export const projects: Project[] = [
   {
     title: "Bettercast Event Hosting",
     description:
@@ -28,7 +30,7 @@ export const projects = [
       "Tailwind",
       "GraphQL",
     ],
-    link: "https://www.execfor.com/",
+    link: "https://www.joinexec.com/",
   },
   {
     title: "Facebook Clone",
@@ -36,7 +38,6 @@ export const projects = [
       "A clone of the Facebook social media platform. It implements core features of Facebook such as friending, posting, commenting and liking.",
     image: "/images/facebrook-mockshot.png",
     technologies: ["Ruby on Rails", "HTML", "CSS", "JavaScript"],
-    link: "https://brookapp.herokuapp.com/",
     sourceLink: "https://github.com/mikenath223/Project-Building-Facebook",
   },
   {
@@ -53,7 +54,7 @@ export const projects = [
       "HTML5-CSS3",
       "JavaScript",
     ],
-    link: "https://trixxcare.netlify.app/",
+    // link: "https://trixxcare.netlify.app/",
     frontendSource: "https://github.com/mikenath223/trixxcare",
     backendSource: "https://github.com/mikenath223/trixxcare-api",
   },
@@ -69,7 +70,7 @@ export const projects = [
       "CSS-Modules",
       "JavaScript",
     ],
-    link: "https://muunchit.herokuapp.com/",
+    // link: "https://muunchit.herokuapp.com/",
     sourceLink: "https://github.com/mikenath223/Cook-book-app",
   },
   {
@@ -93,7 +94,7 @@ export const projects = [
     description: "",
     image: "/images/portfolio-mock.png",
     technologies: ["HTML5", "CSS3(SCSS)", "JavaScript"],
-    link: "https://michgolden.netlify.com/",
+    link: "https://michgolden.netlify.app/",
     sourceLink: "https://github.com/mikenath223/Portfolio",
   },
 ];

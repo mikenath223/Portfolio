@@ -1,8 +1,8 @@
 "use client";
 
+import { projects } from "@src/constants/projects.constants";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { projects } from "../../constants/projects.constants";
 
 const FeaturedProjects = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -59,7 +59,7 @@ const FeaturedProjects = () => {
                 className="proj-img w-[160px] sm:h-[300px] h-[260px]"
               />
             </div>
-            <figcaption className="main-project flex-grow py-3">
+            <figcaption className="main-project flex-grow py-3 self-start">
               <h3 className="text-xl text-center font-bold mb-2 text-proj-desc-light dark:text-proj-desc-dark">
                 {project.title}
               </h3>
@@ -77,21 +77,23 @@ const FeaturedProjects = () => {
                 ))}
               </div>
               <div className="source-wrap mt-4 flex items-center justify-center gap-3 flex-wrap">
-                <a
-                  href={project.link}
-                  rel="noopener"
-                  target="_blank"
-                  className="bg-blue-500 px-4 py-2 rounded"
-                >
-                  <Image
-                    src="/images/icons8-open.png"
-                    alt="open"
-                    width={20}
-                    height={20}
-                    className="inline mr-2"
-                  />
-                  View Page
-                </a>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    rel="noopener"
+                    target="_blank"
+                    className="bg-blue-500 px-4 py-2 rounded"
+                  >
+                    <Image
+                      src="/images/icons8-open.png"
+                      alt="open"
+                      width={20}
+                      height={20}
+                      className="inline mr-2"
+                    />
+                    View Page
+                  </a>
+                )}
                 {project.sourceLink && (
                   <a
                     href={project.sourceLink}
