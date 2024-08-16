@@ -230,7 +230,7 @@ header nav ul {
   background-color: #fff;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
   border: 1px solid #2196f3;
-  bottom: 4px;
+  bottom: 3px;
   content: var(--toggle-img);
   height: 25px;
   left: 4px;
