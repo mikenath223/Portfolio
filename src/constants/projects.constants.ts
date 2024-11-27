@@ -2,6 +2,15 @@ import { Project } from "@src/interfaces/project.interface";
 
 export const projects: Project[] = [
   {
+    title:
+      "Flashcards - AI tool to generate learning material from chosen study pdfs",
+    description:
+      "Flashcards is a tool to generate learning material from chosen study pdfs. The tool is built using Next.js, Tailwind CSS, and OpenAI API.",
+    image: "/images/flashcards-mock.png",
+    technologies: ["Next.js", "TypeScript", "Tailwind", "OpenAI API"],
+    link: "https://flashcards.education/",
+  },
+  {
     title: "Peoplebox - OKR and Strategy Execution Platform for Enterprises",
     description:
       "Built the system to create and track OKRs that increased user signups by 200%. Updated the existing flow for objectives and goals analysis that reduced churn rate by 40%.",
