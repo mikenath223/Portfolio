@@ -151,6 +151,7 @@ header nav ul {
   z-index: 20;
   opacity: 0.1;
   color: #fff;
+  will-change: opacity, bottom, transform;
   animation: rollIn 3s;
 }
 

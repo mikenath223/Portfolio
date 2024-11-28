@@ -37,12 +37,21 @@ export default function Header() {
                 />
                 <div className="slider round">
                   <div className="slider-toggle flex justify-center items-center absolute">
-                    <Image
-                      src={isDarkMode ? "/images/night.png" : "/images/sun.png"}
-                      alt="..."
-                      fill
-                      sizes="100%"
-                    />
+                    {isDarkMode ? (
+                      <Image
+                        src={"/images/night.png"}
+                        alt="..."
+                        fill
+                        sizes="100%"
+                      />
+                    ) : (
+                      <Image
+                        src={"/images/sun.png"}
+                        alt="..."
+                        fill
+                        sizes="100%"
+                      />
+                    )}
                   </div>
                 </div>
               </label>
