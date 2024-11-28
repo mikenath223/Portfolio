@@ -3,6 +3,7 @@
 import { projects } from "@src/constants/projects.constants";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { Link } from "./ui/Link";
 
 const FeaturedProjects = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -79,12 +80,7 @@ const FeaturedProjects = () => {
               </div>
               <div className="source-wrap mt-4 flex items-center justify-center gap-3 flex-wrap">
                 {project.link && (
-                  <a
-                    href={project.link}
-                    rel="noopener"
-                    target="_blank"
-                    className="bg-blue-500 px-4 py-2 rounded"
-                  >
+                  <Link href={project.link}>
                     <Image
                       src="/images/icons8-open.png"
                       alt="open"
@@ -93,15 +89,10 @@ const FeaturedProjects = () => {
                       className="inline mr-2"
                     />
                     View Page
-                  </a>
+                  </Link>
                 )}
                 {project.sourceLink && (
-                  <a
-                    href={project.sourceLink}
-                    rel="noopener"
-                    target="_blank"
-                    className="bg-blue-500 px-4 py-2 rounded ml-4"
-                  >
+                  <Link href={project.sourceLink}>
                     <Image
                       src={
                         isDarkMode
@@ -114,15 +105,10 @@ const FeaturedProjects = () => {
                       className="inline mr-2"
                     />
                     Source Code
-                  </a>
+                  </Link>
                 )}
                 {project.frontendSource && (
-                  <a
-                    href={project.frontendSource}
-                    rel="noopener"
-                    target="_blank"
-                    className="bg-blue-500 px-4 py-2 rounded ml-4"
-                  >
+                  <Link href={project.frontendSource}>
                     <Image
                       src={
                         isDarkMode
@@ -135,15 +121,10 @@ const FeaturedProjects = () => {
                       className="inline mr-2"
                     />
                     Frontend Source
-                  </a>
+                  </Link>
                 )}
                 {project.backendSource && (
-                  <a
-                    href={project.backendSource}
-                    rel="noopener"
-                    target="_blank"
-                    className="bg-blue-500 px-4 py-2 rounded ml-4"
-                  >
+                  <Link href={project.backendSource}>
                     <Image
                       src={
                         isDarkMode
@@ -156,7 +137,7 @@ const FeaturedProjects = () => {
                       className="inline mr-2"
                     />
                     Backend Source
-                  </a>
+                  </Link>
                 )}
               </div>
             </figcaption>
