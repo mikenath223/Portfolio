@@ -8,7 +8,7 @@ export const projects: Project[] = [
       "Flashcards is a tool to generate learning material from chosen study pdfs. The tool is built using Next.js, Tailwind CSS, and OpenAI API.",
     image: "/images/flashcards-mock.png",
     technologies: ["Next.js", "TypeScript", "Tailwind", "OpenAI API"],
-    link: "https://flashcards.education/",
+    link: "https://qa.flashcards.education/",
   },
   {
     title: "Peoplebox - OKR and Strategy Execution Platform for Enterprises",
@@ -48,5 +48,23 @@ export const projects: Project[] = [
     technologies: ["HTML5", "CSS3(SCSS)", "JavaScript"],
     link: "https://michgolden.netlify.app/",
     sourceLink: "https://github.com/mikenath223/Portfolio",
+  },
+];
+
+export const headerSocials = [
+  {
+    src: "",
+    href: "https://github.com/mikenath223",
+    alt: "github",
+  },
+  {
+    src: "/images/icons8-linkedin-30.png",
+    href: "https://www.linkedin.com/in/michgoldenukeje/",
+    alt: "linkedin",
+  },
+  {
+    src: "/images/icons8-twitter-30.png",
+    href: "https://x.com/thedevmich",
+    alt: "twitter",
   },
 ];

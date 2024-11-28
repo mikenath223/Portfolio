@@ -34,7 +34,6 @@ export default function RootLayout({
             gtag('config', 'UA-153326093-1');
           `}
         </Script>
-        <Script src="script.js" strategy="lazyOnload" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>

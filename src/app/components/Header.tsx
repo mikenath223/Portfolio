@@ -1,16 +1,50 @@
+"use client";
+
+import Image from "next/image";
+import useDarkMode from "../hooks/useDarkMode";
+import useSocials from "../hooks/useSocials";
+import { HeaderSocials } from "./HeaderSocials";
+
 export default function Header() {
+  const { isDarkMode, toggleDarkMode, applyDarkMode } = useDarkMode();
+  const { handleBallAnimation, isBallExpanded } = useSocials(applyDarkMode);
+
+  const onChangeDarkMode = () => {
+    toggleDarkMode(!isDarkMode);
+    document.documentElement.classList.toggle("dark");
+  };
+
   return (
     <>
       <div className="clip-effect"></div>
       <header>
-        <div className="ball">
-          <p className="-mt-1">M</p>
+        <div
+          ref={handleBallAnimation}
+          className={!isBallExpanded ? "ball" : "expand"}
+        >
+          <p className="-mt-1 flex items-center gap-2 justify-center">
+            {!isBallExpanded ? "M" : <HeaderSocials isDarkMode={isDarkMode} />}
+          </p>
           <br />
           <div className="toggle">
             <div className="theme-switch-wrapper">
               <label className="theme-switch" htmlFor="checkbox">
-                <input id="checkbox" type="checkbox" />
-                <div className="slider round"></div>
+                <input
+                  id="checkbox"
+                  type="checkbox"
+                  checked={isDarkMode}
+                  onChange={onChangeDarkMode}
+                />
+                <div className="slider round">
+                  <div className="slider-toggle flex justify-center items-center absolute">
+                    <Image
+                      src={isDarkMode ? "/images/night.png" : "/images/sun.png"}
+                      alt="..."
+                      fill
+                      sizes="100%"
+                    />
+                  </div>
+                </div>
               </label>
             </div>
           </div>

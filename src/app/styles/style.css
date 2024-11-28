@@ -15,7 +15,6 @@
   --slider-bg-tint: #ededf3;
   --slider-border: rgba(0, 0, 0, 0.7);
   --contact-bg-color: #262626;
-  --toggle-img: url("/images/sun.png");
   --bg-brackets: url(/images/brackets.png);
 }
 
@@ -34,7 +33,6 @@
   --negative-skill-shadow: #272626;
   --slider-bg-light: #000;
   --slider-bg-tint: #000;
-  --toggle-img: url("/images/night.png");
   --slider-border: rgb(255, 255, 255);
 }
 
@@ -143,7 +141,7 @@ header nav ul {
   position: fixed;
   width: 35px;
   height: 35px;
-  bottom: 0;
+  bottom: 50%;
   left: 10px;
   border: 3px solid #afe0ff;
   border-radius: 50%;
@@ -153,8 +151,7 @@ header nav ul {
   z-index: 20;
   opacity: 0.1;
   color: #fff;
-  -webkit-animation: rollIn 3s forwards linear;
-  animation: rollIn 3s forwards linear;
+  animation: rollIn 3s;
 }
 
 .expand {
@@ -166,10 +163,8 @@ header nav ul {
   left: 10px;
   opacity: 0.3;
   z-index: 99;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  -webkit-animation: expand 0.5s forwards ease-out;
-  animation: expand 0.5s forwards ease-out;
+  animation: expand 0.3s forwards ease-out;
 }
 
 .ball p {
@@ -226,17 +221,14 @@ header nav ul {
   border: 2px solid var(--slider-border);
 }
 
-.slider:before {
+.slider-toggle {
   background-color: #fff;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
   border: 1px solid #2196f3;
   bottom: 3px;
-  content: var(--toggle-img);
   height: 25px;
   left: 4px;
   z-index: 10;
-  position: absolute;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
   width: 25px;
   border-radius: 50%;
@@ -246,89 +238,33 @@ input:checked + .slider {
   background-color: #000;
   border-color: #2196f3;
 }
-
-input:checked + .slider:before {
+input:checked + .slider .slider-toggle {
   background-color: #afe0ff;
+  transform: translateX(100%);
 }
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
 .round {
   border-radius: 34px;
 }
-
-@-webkit-keyframes expand {
-  from {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.6;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 @keyframes expand {
-  from {
+  0% {
     opacity: 0.3;
   }
   50% {
     opacity: 0.6;
   }
-  to {
+  100% {
     opacity: 1;
-  }
-}
-@-webkit-keyframes rollIn {
-  from {
-    opacity: 0.8;
-    -webkit-transform: translate(0, 0) rotate(0deg);
-    transform: translate(0, 0) rotate(0deg);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translate(0, -700px) rotate(360deg);
-    transform: translate(0, -700px) rotate(360deg);
   }
 }
 @keyframes rollIn {
   from {
     opacity: 0.8;
-    -webkit-transform: translate(0, 0) rotate(0deg);
-    transform: translate(0, 0) rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate(0, -700px) rotate(360deg);
-    transform: translate(0, -700px) rotate(360deg);
-  }
-}
-@-webkit-keyframes rollInSmall {
-  from {
-    opacity: 0.8;
-    -webkit-transform: translate(0, 0) rotate(0deg);
-    transform: translate(0, 0) rotate(0deg);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translate(0, -530px) rotate(360deg);
-    transform: translate(0, -530px) rotate(360deg);
-  }
-}
-@keyframes rollInSmall {
-  from {
-    opacity: 0.8;
-    -webkit-transform: translate(0, 0) rotate(0deg);
-    transform: translate(0, 0) rotate(0deg);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translate(0, -530px) rotate(360deg);
-    transform: translate(0, -530px) rotate(360deg);
+    bottom: 90%;
+    transform: rotate(360deg);
   }
 }
 .articles .article-one {
@@ -663,12 +599,6 @@ input:checked + .slider:before {
     height: 35px;
     margin-bottom: 15px;
   }
-  .ball {
-    z-index: 5;
-    -webkit-animation: rollInSmall 3s forwards linear;
-    animation: rollInSmall 3s forwards linear;
-  }
-
   .article-top {
     flex-direction: column;
     margin-bottom: 0;
@@ -752,13 +682,13 @@ input:checked + .slider:before {
     height: 90%;
   }
 
-  .slider:before {
+  .slider-toggle {
     width: 22px;
     height: 22px;
     bottom: 2px;
   }
 
-  input:checked + .slider:before {
+  input:checked + .slider-toggle {
     -webkit-transform: translateX(17px);
     transform: translateX(17px);
   }

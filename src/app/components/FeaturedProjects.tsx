@@ -56,6 +56,7 @@ const FeaturedProjects = () => {
                 alt={project.title}
                 width={300}
                 height={200}
+                priority={index === 0}
                 className="proj-img w-[160px] sm:h-[300px] h-[260px]"
               />
             </div>
