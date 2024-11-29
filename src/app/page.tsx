@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main className="main-container">
+    <main className="main-container overflow-hidden">
       <Header />
       <Intro />
       <FeaturedProjects />
