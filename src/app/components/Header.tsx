@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import useDarkMode from "../hooks/useDarkMode";
 import useSocials from "../hooks/useSocials";
 import { HeaderSocials } from "./HeaderSocials";
+import { SliderToggle } from "./ui/SliderToggle";
 
 export default function Header() {
   const { isDarkMode, toggleDarkMode, applyDarkMode } = useDarkMode();
@@ -35,27 +35,7 @@ export default function Header() {
                   checked={isDarkMode}
                   onChange={onChangeDarkMode}
                 />
-                <div className="slider round">
-                  <div className="slider-toggle flex justify-center items-center absolute">
-                    {isDarkMode ? (
-                      <Image
-                        src={"/images/night.png"}
-                        alt="..."
-                        fill
-                        priority
-                        sizes="100%"
-                      />
-                    ) : (
-                      <Image
-                        src={"/images/sun.png"}
-                        alt="..."
-                        fill
-                        priority
-                        sizes="100%"
-                      />
-                    )}
-                  </div>
-                </div>
+                <SliderToggle isDarkMode={isDarkMode} />
               </label>
             </div>
           </div>
