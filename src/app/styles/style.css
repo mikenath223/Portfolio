@@ -345,7 +345,6 @@ input:checked + .slider .slider-toggle {
 
 .main-container .intro .skill::before {
   content: "";
-  display: block;
   position: absolute;
   z-index: 9;
   background: var(--bg-brackets) center/contain no-repeat var(--skill-bg-color);

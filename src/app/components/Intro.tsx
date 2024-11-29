@@ -12,7 +12,7 @@ const Intro = () => {
         UI-UX integrated web solutions.
       </div>
       <div
-        className={`skill before:-bottom-[75px] md:mt-0 mt-10 before:-left-[55px] 
+        className={`skill before:-bottom-[75px] md:before:-bottom-[135px] md:before:hidden xl:before:block xl:before:-bottom-[50px] mt-10 md:mt-20 before:-left-[55px] 
           md:before:w-[400px] md:before:h-[400px]
           before:md:-left-[90px]
         before:w-[300px] before:h-[300px] 
