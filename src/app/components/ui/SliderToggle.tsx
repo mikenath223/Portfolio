@@ -1,25 +1,34 @@
 import Image from "next/image";
 
 interface ISliderToggleProps {
-  isDarkMode: boolean;
+  children: React.ReactNode;
 }
 
-export const SliderToggle = ({ isDarkMode }: ISliderToggleProps) => {
+const Toggle = ({ children }: ISliderToggleProps) => {
   return (
     <div className="slider round">
       <div className="slider-toggle flex justify-center items-center absolute">
-        {isDarkMode ? (
-          <Image
-            src={"/images/night.png"}
-            alt="..."
-            fill
-            priority
-            sizes="100%"
-          />
-        ) : (
-          <Image src={"/images/sun.png"} alt="..." fill priority sizes="100%" />
-        )}
+        {children}
       </div>
     </div>
   );
 };
+
+interface IConProps {
+  isDarkMode: boolean;
+}
+
+const Icon = ({ isDarkMode }: IConProps) => {
+  return isDarkMode ? (
+    <Image src={"/images/night.png"} alt="..." fill priority sizes="100%" />
+  ) : (
+    <Image src={"/images/sun.png"} alt="..." fill priority sizes="100%" />
+  );
+};
+
+const Slider = {
+  Toggle,
+  Icon,
+};
+
+export default Slider;

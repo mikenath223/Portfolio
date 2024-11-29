@@ -3,7 +3,7 @@
 import useDarkMode from "../hooks/useDarkMode";
 import useSocials from "../hooks/useSocials";
 import { HeaderSocials } from "./HeaderSocials";
-import { SliderToggle } from "./ui/SliderToggle";
+import Slider from "./ui/SliderToggle";
 
 export default function Header() {
   const { isDarkMode, toggleDarkMode, applyDarkMode } = useDarkMode();
@@ -35,7 +35,9 @@ export default function Header() {
                   checked={isDarkMode}
                   onChange={onChangeDarkMode}
                 />
-                <SliderToggle isDarkMode={isDarkMode} />
+                <Slider.Toggle>
+                  <Slider.Icon isDarkMode={isDarkMode} />
+                </Slider.Toggle>
               </label>
             </div>
           </div>
