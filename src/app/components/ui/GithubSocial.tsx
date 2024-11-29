@@ -12,6 +12,7 @@ export const GithubSocial = ({ isDarkMode, alt }: IGitHubSocialProps) => {
       alt={alt}
       width={30}
       height={30}
+      priority
     />
   ) : (
     <Image
@@ -19,6 +20,7 @@ export const GithubSocial = ({ isDarkMode, alt }: IGitHubSocialProps) => {
       alt={alt}
       width={30}
       height={30}
+      priority
     />
   );
 };

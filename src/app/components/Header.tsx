@@ -42,6 +42,7 @@ export default function Header() {
                         src={"/images/night.png"}
                         alt="..."
                         fill
+                        priority
                         sizes="100%"
                       />
                     ) : (
@@ -49,6 +50,7 @@ export default function Header() {
                         src={"/images/sun.png"}
                         alt="..."
                         fill
+                        priority
                         sizes="100%"
                       />
                     )}
