@@ -11,7 +11,29 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Portfolio | Ukeje Michgolden",
   description:
-    "My portfolio webpage, showcasing a few projects I have worked on, in the following main stacks:- Ruby, Rails, React, Redux, HTML-CSS, JavaScript.",
+    "Explore the portfolio of Ukeje Michgolden, showcasing expertise in Ruby, Rails, React, Redux, HTML, CSS, and JavaScript through a range of innovative projects.",
+  openGraph: {
+    title: "Portfolio | Ukeje Michgolden",
+    description:
+      "Explore the portfolio of Ukeje Michgolden, showcasing expertise in Ruby, Rails, React, Redux, HTML, CSS, and JavaScript through a range of innovative projects.",
+    url: "https://michgolden.netlify.app",
+    type: "website",
+    images: [
+      {
+        url: "https://michgolden.netlify.app/images/profile.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Ukeje Michgolden Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Portfolio | Ukeje Michgolden",
+    description:
+      "Explore Ukeje Michgolden's portfolio, featuring projects in Ruby, Rails, React, Redux, HTML, CSS, and JavaScript.",
+    images: ["https://michgolden.netlify.app/images/profile.jpeg"],
+  },
 };
 
 export default function RootLayout({

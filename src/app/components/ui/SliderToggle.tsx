@@ -1,3 +1,4 @@
+import { useCheckDarkMode } from "@src/app/hooks/useCheckDarkMode";
 import Image from "next/image";
 
 interface ISliderToggleProps {
@@ -14,11 +15,9 @@ const Toggle = ({ children }: ISliderToggleProps) => {
   );
 };
 
-interface IConProps {
-  isDarkMode: boolean;
-}
+const Icon = () => {
+  const { isDarkMode } = useCheckDarkMode();
 
-const Icon = ({ isDarkMode }: IConProps) => {
   return isDarkMode ? (
     <Image src={"/images/night.png"} alt="..." fill priority sizes="100%" />
   ) : (

@@ -32,11 +32,12 @@ export default function Header() {
                 <input
                   id="checkbox"
                   type="checkbox"
+                  name="checkbox"
                   checked={isDarkMode}
                   onChange={onChangeDarkMode}
                 />
                 <Slider.Toggle>
-                  <Slider.Icon isDarkMode={isDarkMode} />
+                  <Slider.Icon />
                 </Slider.Toggle>
               </label>
             </div>
