@@ -3,11 +3,9 @@
 import { projects } from "@src/constants/projects.constants";
 import Image from "next/image";
 import { Link } from "./ui/Link";
-import { useCheckDarkMode } from "../hooks/useCheckDarkMode";
+import { FaGithub } from "react-icons/fa";
 
 const FeaturedProjects = () => {
-  const { isDarkMode } = useCheckDarkMode();
-
   return (
     <section
       id="feature-project"
@@ -37,7 +35,7 @@ const FeaturedProjects = () => {
                 className="proj-img w-[160px] sm:h-[300px] h-[260px]"
               />
             </div>
-            <figcaption className="main-project flex-grow py-3 self-start">
+            <figcaption className="main-project flex-grow py-3">
               <h3 className="text-xl text-center font-bold mb-2 text-proj-desc-light dark:text-proj-desc-dark">
                 {project.title}
               </h3>
@@ -69,49 +67,19 @@ const FeaturedProjects = () => {
                 )}
                 {project.sourceLink && (
                   <Link href={project.sourceLink}>
-                    <Image
-                      src={
-                        isDarkMode
-                          ? "/images/icons8-github-white.png"
-                          : "/images/icons8-github-30.png"
-                      }
-                      alt="open"
-                      width={20}
-                      height={20}
-                      className="inline mr-2"
-                    />
+                    <FaGithub color="#0088d3" className="inline mr-2 w-5 h-5" />
                     Source Code
                   </Link>
                 )}
                 {project.frontendSource && (
                   <Link href={project.frontendSource}>
-                    <Image
-                      src={
-                        isDarkMode
-                          ? "/images/icons8-github-white.png"
-                          : "/images/icons8-github-30.png"
-                      }
-                      alt="open"
-                      width={20}
-                      height={20}
-                      className="inline mr-2"
-                    />
+                    <FaGithub color="#0088d3" className="inline mr-2" />
                     Frontend Source
                   </Link>
                 )}
                 {project.backendSource && (
                   <Link href={project.backendSource}>
-                    <Image
-                      src={
-                        isDarkMode
-                          ? "/images/icons8-github-white.png"
-                          : "/images/icons8-github-30.png"
-                      }
-                      alt="open"
-                      width={20}
-                      height={20}
-                      className="inline mr-2"
-                    />
+                    <FaGithub color="#0088d3" className="inline mr-2" />
                     Backend Source
                   </Link>
                 )}
