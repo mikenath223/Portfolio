@@ -11,7 +11,6 @@ const useSocials = (applyDarkMode: (isDark: boolean) => void) => {
       if (ball) {
         const animations = ball.getAnimations();
         const handleAnimationEnd = () => {
-          console.log("ended animation");
           setIsBallExpanded(true);
           applyDarkMode(detectDarkMode());
         };
