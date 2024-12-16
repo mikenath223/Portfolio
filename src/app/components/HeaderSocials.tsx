@@ -1,29 +1,18 @@
-import { headerSocials } from "@src/constants/projects.constants";
-import Image from "next/image";
-import { GithubSocial } from "./ui/GithubSocial";
+import { LinkIcon } from "./ui/LinkIcon";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
-interface IHeaderSocials {
-  isDarkMode: boolean;
-}
-
-export const HeaderSocials = ({ isDarkMode }: IHeaderSocials) => {
+export const HeaderSocials = () => {
   return (
     <>
-      {headerSocials.map(({ src, href, alt }, index) => (
-        <a
-          key={alt}
-          href={href}
-          className="soc-ball"
-          rel="noopener"
-          target="_blank"
-        >
-          {index !== 0 ? (
-            <Image src={src} alt={alt} width={30} height={30} />
-          ) : (
-            <GithubSocial isDarkMode={isDarkMode} alt={alt} />
-          )}
-        </a>
-      ))}
+      <LinkIcon href={"https://github.com/mikenath223"}>
+        <FaGithub color="#0088d3" />
+      </LinkIcon>
+      <LinkIcon href={"https://www.linkedin.com/in/michgoldenukeje/"}>
+        <FaLinkedin color="#0088d3" />
+      </LinkIcon>
+      <LinkIcon href={"https://www.linkedin.com/in/michgoldenukeje/"}>
+        <FaTwitter color="#0088d3" />
+      </LinkIcon>
     </>
   );
 };

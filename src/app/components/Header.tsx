@@ -23,7 +23,7 @@ export default function Header() {
           className={!isBallExpanded ? "ball" : "expand"}
         >
           <p className="-mt-1 flex items-center gap-2 justify-center">
-            {!isBallExpanded ? "M" : <HeaderSocials isDarkMode={isDarkMode} />}
+            {!isBallExpanded ? "M" : <HeaderSocials />}
           </p>
           <br />
           <div className="toggle">

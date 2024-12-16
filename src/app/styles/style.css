@@ -98,17 +98,15 @@ header nav .line span {
   background: var(--span-bg-color);
 }
 header nav .line .span1 {
-  width: 50px;
   -webkit-animation: line 2s linear;
   animation: line 2s linear;
 }
 header nav .line .span2 {
-  width: 40px;
+  width: 60%;
   -webkit-animation: mid-line 2s linear;
   animation: mid-line 2s linear;
 }
 header nav .line .span3 {
-  width: 50px;
   -webkit-animation: line 2s linear;
   animation: line 2s linear;
 }
@@ -397,31 +395,12 @@ input:checked + .slider .slider-toggle {
   background-color: var(--skills-bg-color);
 }
 
-@-webkit-keyframes line {
-  50% {
-    width: 35px;
-  }
-  100% {
-    width: 50px;
-  }
-}
-
 @keyframes line {
   50% {
-    width: 35px;
+    width: 50%;
   }
   100% {
-    width: 50px;
-  }
-}
-@-webkit-keyframes mid-line {
-  50% {
-    -webkit-transform: translateX(-30px);
-    transform: translateX(-30px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    width: 100%;
   }
 }
 @keyframes mid-line {
@@ -434,30 +413,12 @@ input:checked + .slider .slider-toggle {
     transform: translateX(0);
   }
 }
-@-webkit-keyframes cursor {
-  from {
-    opacity: 1;
-  }
-  from {
-    opacity: 0;
-  }
-}
 @keyframes cursor {
   from {
     opacity: 1;
   }
   from {
     opacity: 0;
-  }
-}
-@-webkit-keyframes drift {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  from {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
   }
 }
 @keyframes drift {
@@ -628,7 +589,6 @@ input:checked + .slider .slider-toggle {
   }
 
   header nav {
-    margin-top: -4px;
     margin-right: 12px;
   }
   header nav ul {
@@ -636,9 +596,6 @@ input:checked + .slider .slider-toggle {
     font-size: 16px;
     width: initial;
     padding: 0;
-  }
-  header nav ul li {
-    text-align: right;
   }
   .main-container .intro {
     width: auto;

@@ -17,7 +17,7 @@ const FeaturedProjects = () => {
         <h1 className="text-3xl mb-4 text-body-font-light dark:text-body-font-dark">
           Featured Projects
         </h1>
-        <p className="text-body-font-light dark:text-body-font-dark">
+        <p className="text-body-font-light dark:text-body-font-dark text-base xl:text-lg">
           Here are a few of the projects I have worked on.
         </p>
       </div>

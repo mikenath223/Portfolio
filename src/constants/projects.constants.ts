@@ -50,21 +50,3 @@ export const projects: Project[] = [
     sourceLink: "https://github.com/mikenath223/Portfolio",
   },
 ];
-
-export const headerSocials = [
-  {
-    src: "",
-    href: "https://github.com/mikenath223",
-    alt: "github",
-  },
-  {
-    src: "/images/icons8-linkedin-30.png",
-    href: "https://www.linkedin.com/in/michgoldenukeje/",
-    alt: "linkedin",
-  },
-  {
-    src: "/images/icons8-twitter-30.png",
-    href: "https://x.com/thedevmich",
-    alt: "twitter",
-  },
-];
