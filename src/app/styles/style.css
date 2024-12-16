@@ -628,7 +628,6 @@ input:checked + .slider .slider-toggle {
   }
 
   header nav {
-    width: 150px;
     margin-top: -4px;
     margin-right: 12px;
   }
