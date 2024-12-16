@@ -150,7 +150,7 @@ header nav ul {
   opacity: 0.1;
   color: #fff;
   will-change: opacity, bottom, transform;
-  animation: rollIn 3s;
+  animation: rollIn 3s forwards;
 }
 
 .expand {

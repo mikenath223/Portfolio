@@ -9,13 +9,19 @@ const useSocials = (applyDarkMode: (isDark: boolean) => void) => {
         window.matchMedia("(prefers-color-scheme: dark)").matches;
 
       if (ball) {
-        const handleAnimationEnd = (e: AnimationEvent) => {
+        const animations = ball.getAnimations();
+        const handleAnimationEnd = () => {
+          console.log("ended animation");
           setIsBallExpanded(true);
           applyDarkMode(detectDarkMode());
         };
 
         ball.addEventListener("animationend", handleAnimationEnd);
 
+        const firstAnimationEnded = animations?.[0].playState === "finished";
+        if (firstAnimationEnded) {
+          handleAnimationEnd();
+        }
         return () => {
           ball.removeEventListener("animationend", handleAnimationEnd);
         };
