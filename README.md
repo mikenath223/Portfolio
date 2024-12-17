@@ -52,6 +52,6 @@ To learn more about the technologies used in this project:
 
 ## Contact
 
-[Michgolden Ukeje] - [ukejemichgolden@yahoo.com]
+[Michgolden Ukeje] - [ukejemichgolden@gmail.com]
 
 Project Link: [https://github.com/mikenath223/Portfolio](https://github.com/mikenath223/Portfolio)
